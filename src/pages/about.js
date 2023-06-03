@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Head from 'next/head'
 import TextAnimation from '@/components/TextAnimation'
-import Layout from '@/components/Layout';
+import Layout from '@/components/Layout'
 import portraitPicture from '../../public/images/profile/portraitPicture.jpg'
-import Image from 'next/image';
+import Image from 'next/image'
+import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
+import Skills from '@/components/Skills'
+
+const NumAnimation = ({num}) => {
+    const ref = useRef(null);
+    const motionVal = useMotionValue(0);
+
+    const springVal = useSpring(motionVal, { duration: 3000 });
+    const isInView = useInView(ref, { once: true });
+
+    useEffect(() => {
+      if (isInView) {
+        motionVal.set(num);
+      }
+    }, [isInView, num, motionValue])
+    
+    useEffect(() => {
+      springVal.on("change", (upToDate) => {
+        //console.log(upToDate)
+
+        if (ref.current && upToDate.toFixed(0) <= num) {
+            ref.current.textContent = upToDate.toFixed(0)
+        }
+      })
+    }, [springVal, num])
+    
+    return <span ref={ref}></span>
+}
 
 const About = () => {
     return (
@@ -14,7 +42,7 @@ const About = () => {
             </Head>
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16'>
-                    <TextAnimation text="Never Stop Dreaming!" className='mb-16' />
+                    <TextAnimation text="Keep Moving Forward!" className='mb-16' />
                     <div className='grid w-full grid-cols-8 gap-16'>
                         <div className='col-span-3 flex flex-col items-center justify-start'>
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>About Me</h2>
@@ -37,8 +65,34 @@ const About = () => {
                             <Image src={portraitPicture} alt='Ryan Abeysinghe Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' />
                         </div>
 
+                        <div className='col-span-2 flex flex-col items-end justify-between'>
+
+                            <div className='flex flex-col items-end justify-center'>
+                                <span className='inline-block text-7xl font-bold'>
+                                    <NumAnimation num={5} />+
+                                </span>
+                                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
+                            </div>
+
+                            <div className='flex flex-col items-end justify-center'>
+                                <span className='inline-block text-7xl font-bold'>
+                                    <NumAnimation num={2} />+
+                                </span>
+                                <h2 className='text-xl font-medium capitalize text-dark/75'>years of F/E experience</h2>
+                            </div>
+
+                            <div className='flex flex-col items-end justify-center'>
+                                <span className='inline-block text-7xl font-bold'>
+                                    <NumAnimation num={1} />+
+                                </span>
+                                <h2 className='text-xl font-medium capitalize text-dark/75'>years of B/E experience</h2>
+                            </div>
+
+                        </div>
 
                     </div>
+
+                <Skills />    
 
                 </Layout>
 
