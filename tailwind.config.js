@@ -18,8 +18,8 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
-        marquee: 'marquee 20s linear infinite',
-        marquee2: 'marquee2 20s linear infinite',
+        marquee: 'marquee 10s linear infinite',
+        marquee2: 'marquee2 10s linear infinite',
       },
       keyframes: {
         marquee: {
