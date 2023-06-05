@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
+import skillsCSS from '../styles/Skills.module.css'
 
-import CSSImg from '../../public/images/skills/CSS-transparent.png';
-import NodeJSImg from '../../public/images/skills/nodeJS-transparent.png';
 import ReactImg from '../../public/images/skills/react-transparent.png';
 import JavaImg from '../../public/images/skills/java-transparent.png';
 import GitImg from '../../public/images/skills/git-transparent.png';
+import CSSImg from '../../public/images/skills/CSS-transparent.png';
+import NodeJSImg from '../../public/images/skills/nodeJS-transparent.png';
 import NextJSImg from '../../public/images/skills/nextJS-transparent.png';
 import SwiftImg from '../../public/images/skills/swift-transparent.png';
 import PythonImg from '../../public/images/skills/python-transparent.png';
 import DockerImg from '../../public/images/skills/docker-transparent.png';
 import HTMLImg from '../../public/images/skills/html-transparent.png';
-
-// import ExpressJSImg from '../../public/images/skills/expressJS-transparent.png';
-// import MongoDBImg from '../../public/images/skills/mongodb-transparent.png';
-// import GoogleFirebaseImg from '../../public/images/skills/googleFirebase-transparent.png';
-// import TailwindCSSImg from '../../public/images/skills/tailwindCSS-transparent.png';
+import ExpressJSImg from '../../public/images/skills/expressJS-transparent.png';
+import MongoDBImg from '../../public/images/skills/mongodb-transparent.png';
+import GoogleFirebaseImg from '../../public/images/skills/googleFirebase-transparent.png';
+import TailwindCSSImg from '../../public/images/skills/tailwindCSS-transparent.png';
 
 const imageArray = [
     { src: JavaImg, alt: 'Java Logo', text: 'Java' },
@@ -29,38 +29,59 @@ const imageArray = [
     { src: DockerImg, alt: 'Docker Logo', text: 'Docker' },
     { src: PythonImg, alt: 'Python Logo', text: 'Python' },  
 
-    // { src: GoogleFirebaseImg, alt: 'Google Firebase Logo', text: 'Firebase' },
-    // { src: ExpressJSImg, alt: 'Express JS Logo', text: 'Express.js' },
-    // { src: TailwindCSSImg, alt: 'Tailwind CSS Logo', text: 'Tailwind' },
-    // { src: MongoDBImg, alt: 'Mongo DB Logo', text: 'Mongo DB' },
+    { src: GoogleFirebaseImg, alt: 'Google Firebase Logo', text: 'Google Firebase' },
+    { src: ExpressJSImg, alt: 'Express JS Logo', text: 'Express.js' },
+    { src: TailwindCSSImg, alt: 'Tailwind CSS Logo', text: 'Tailwind CSS' },
+    { src: MongoDBImg, alt: 'Mongo DB Logo', text: 'Mongo DB' },
 ];
 
 const Skills = () => {
-    return (
-        <>
-            <div className="flex w-full relative overflow-x-hidden">
-                
-                <div className="flex py-12 animate-marquee whitespace-nowrap">
-                    {imageArray.map((path, index) => (
-                        <div key={index} className="mx-4 hover:scale-125 hover:delay-150">
-                            <Image src={path.src} alt={path.alt} className="w-full" />
-                            <p className="text-center text-lg font-medium">{path.text}</p>
-                        </div>
-                    ))}
-                </div>
+    const [hoveredIndex, setHoveredIndex] = useState(-1);
 
-                <div className="flex absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
-                    {imageArray.map((path, index) => (
-                        <div key={index} className="mx-4 hover:scale-125 hover:delay-150">
-                            <Image src={path.src} alt={path.alt} className="w-full" />
-                            <p className="text-center text-lg font-medium">{path.text}</p>
+    const handleHover = (index) => {
+        setHoveredIndex(index);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredIndex(-1);
+    };
+
+    return (
+        <div className="flex w-full relative overflow-x-hidden">
+            <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
+                {imageArray.map((path, index) => (
+                    <div
+                        key={index}
+                        className={`mx-6 hover:scale-150 transition-transform duration-1000 ${hoveredIndex === index ? skillsCSS['animate-paused'] : ''
+                            }`}
+                        onMouseEnter={() => handleHover(index)}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        <div className={skillsCSS.imageContainer}>
+                            <Image src={path.src} alt={path.alt} className="w-full"/>
                         </div>
-                    ))}
-                </div>
+                        <p className="text-center text-lg font-medium">{path.text}</p>
+                    </div>
+                ))}
             </div>
-        </>
+
+            <div className={`flex absolute top-0 py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee2`}>
+                {imageArray.map((path, index) => (
+                    <div
+                        key={index}
+                        className={`mx-6 hover:scale-150 transition-transform duration-1000 ${hoveredIndex === index ? skillsCSS['animate-paused'] : ''}`}
+                        onMouseEnter={() => handleHover(index)}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        <div className={skillsCSS.imageContainer}>
+                            <Image src={path.src} alt={path.alt} className="w-full"/>
+                        </div>
+                        <p className="text-center text-lg font-medium">{path.text}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
-
 
 export default Skills;

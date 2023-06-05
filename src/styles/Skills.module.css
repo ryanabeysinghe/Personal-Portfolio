@@ -1,0 +1,8 @@
+.animate-paused {
+    animation-play-state: paused;
+}
+
+.imageContainer {
+    width: 125px;
+    height: 125px;
+}
