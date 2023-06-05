@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import skillsCSS from '../styles/Skills.module.css'
+import TextAnimation from './TextAnimation';
 
 import ReactImg from '../../public/images/skills/react-transparent.png';
 import JavaImg from '../../public/images/skills/java-transparent.png';
@@ -16,7 +17,6 @@ import ExpressJSImg from '../../public/images/skills/expressJS-transparent.png';
 import MongoDBImg from '../../public/images/skills/mongodb-transparent.png';
 import GoogleFirebaseImg from '../../public/images/skills/googleFirebase-transparent.png';
 import TailwindCSSImg from '../../public/images/skills/tailwindCSS-transparent.png';
-import TextAnimation from './TextAnimation';
 
 const imageArray = [
     { src: JavaImg, alt: 'Java Logo', text: 'Java' },

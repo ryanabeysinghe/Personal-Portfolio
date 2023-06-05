@@ -6,6 +6,7 @@ import portraitPicture from '../../public/images/profile/portraitPicture.jpg'
 import Image from 'next/image'
 import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skills from '@/components/Skills'
+import Experience from '@/components/Experience'
 
 const NumAnimation = ({num}) => {
     const ref = useRef(null);
@@ -92,7 +93,8 @@ const About = () => {
 
                     </div>
 
-                <Skills />    
+                <Skills /> 
+                <Experience />   
 
                 </Layout>
 
