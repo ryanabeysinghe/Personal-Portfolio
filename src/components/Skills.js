@@ -27,7 +27,7 @@ const imageArray = [
     { src: SwiftImg, alt: 'Swift Logo', text: 'Swift' },
     { src: NodeJSImg, alt: 'Node JS Logo', text: 'Node.js' },
     { src: DockerImg, alt: 'Docker Logo', text: 'Docker' },
-    { src: PythonImg, alt: 'Python Logo', text: 'Python' },  
+    { src: PythonImg, alt: 'Python Logo', text: 'Python' },
 
     { src: GoogleFirebaseImg, alt: 'Google Firebase Logo', text: 'Google Firebase' },
     { src: ExpressJSImg, alt: 'Express JS Logo', text: 'Express.js' },
@@ -47,40 +47,46 @@ const Skills = () => {
     };
 
     return (
-        <div className="flex w-full relative overflow-x-hidden">
-            <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
-                {imageArray.map((path, index) => (
-                    <div
-                        key={index}
-                        className={`mx-6 hover:scale-150 transition-transform duration-1000 ${hoveredIndex === index ? skillsCSS['animate-paused'] : ''
-                            }`}
-                        onMouseEnter={() => handleHover(index)}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                        <div className={skillsCSS.imageContainer}>
-                            <Image src={path.src} alt={path.alt} className="w-full"/>
+        <>
+            <h2 className='font-bold text-6xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2>
+
+            <div className={`mt-10 flex w-full relative overflow-x-hidden ${skillsCSS.shadow}`}>
+                <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
+                    {imageArray.map((path, index) => (
+                        <div
+                            key={index}
+                            className={`mx-6 hover:scale-150 transition-transform duration-1000 ${hoveredIndex === index ? skillsCSS['animate-paused'] : ''
+                                }`}
+                            onMouseEnter={() => handleHover(index)}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <div className={skillsCSS.imageContainer}>
+                                <Image src={path.src} alt={path.alt} className="w-full" />
+                            </div>
+                            <p className="mt-2 text-center text-lg font-medium">{path.text}</p>
                         </div>
-                        <p className="text-center text-lg font-medium">{path.text}</p>
-                    </div>
-                ))}
+                    ))}
+                </div>
+
+                <div className={`flex absolute top-0 py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee2`}>
+                    {imageArray.map((path, index) => (
+                        <div
+                            key={index}
+                            className={`mx-6 hover:scale-150 transition-transform duration-1000 ${hoveredIndex === index ? skillsCSS['animate-paused'] : ''}`}
+                            onMouseEnter={() => handleHover(index)}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <div className={skillsCSS.imageContainer}>
+                                <Image src={path.src} alt={path.alt} className="w-full" />
+                            </div>
+                            <p className="mt-2 text-center text-lg font-medium">{path.text}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            <div className={`flex absolute top-0 py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee2`}>
-                {imageArray.map((path, index) => (
-                    <div
-                        key={index}
-                        className={`mx-6 hover:scale-150 transition-transform duration-1000 ${hoveredIndex === index ? skillsCSS['animate-paused'] : ''}`}
-                        onMouseEnter={() => handleHover(index)}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                        <div className={skillsCSS.imageContainer}>
-                            <Image src={path.src} alt={path.alt} className="w-full"/>
-                        </div>
-                        <p className="text-center text-lg font-medium">{path.text}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
+            <h2 className='font-bold text-6xl mt-10 w-full text-left'>&lt;/div&gt;</h2>
+        </>
     );
 };
 
