@@ -27,7 +27,7 @@ export default function Home() {
               <TextAnimation text="Hello, I'm Ryan Abeysinghe!" className='!text-6xl !text-left'/>
               <TextAnimation text="I'm a Software Engineer based in College Park, Maryland. As a full-stack developer, my unwavering focus is on transforming concepts into cutting-edge web applications. 
                 Delve into my most recent experience, projects, and education, showcasing my knowledge in React using Next.js, JavaScript, HTML, CSS, and the field of software engineering. " 
-                className='my-4 text-base font-medium !text-left'/>
+                className='my-4 text-base font-medium !text-left capitalize'/>
 
               {/* <p className='my-4 text-base font-medium'>
                 I'm a Software Engineer based in College Park, Maryland. As a full-stack developer, my unwavering focus is on transforming concepts into cutting-edge web applications. 

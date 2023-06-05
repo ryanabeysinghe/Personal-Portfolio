@@ -1,0 +1,29 @@
+.animate-paused {
+    animation-play-state: paused;
+}
+
+.imageContainer {
+    width: 125px;
+    height: 125px;
+}
+
+.shadow::before, 
+.shadow::after {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 10%;
+    z-index: 2;
+}
+
+.shadow::before {
+    left: 0;
+    right: 0;
+}
+
+.shadow::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
