@@ -16,6 +16,7 @@ import ExpressJSImg from '../../public/images/skills/expressJS-transparent.png';
 import MongoDBImg from '../../public/images/skills/mongodb-transparent.png';
 import GoogleFirebaseImg from '../../public/images/skills/googleFirebase-transparent.png';
 import TailwindCSSImg from '../../public/images/skills/tailwindCSS-transparent.png';
+import TextAnimation from './TextAnimation';
 
 const imageArray = [
     { src: JavaImg, alt: 'Java Logo', text: 'Java' },
@@ -48,7 +49,8 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className='font-bold text-6xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2>
+            <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold text-6xl mt-64 w-full text-left' />
+            {/* <h2 className='font-bold text-6xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2> */}
 
             <div className={`mt-10 flex w-full relative overflow-x-hidden ${skillsCSS.shadow}`}>
                 <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
@@ -85,7 +87,9 @@ const Skills = () => {
                 </div>
             </div>
 
-            <h2 className='font-bold text-6xl mt-10 w-full text-left'>&lt;/div&gt;</h2>
+            <TextAnimation text="&lt;/div&gt;" className='font-bold text-6xl mt-10 w-full text-left' />
+
+            {/* <h2 className='font-bold text-6xl mt-10 w-full text-left'>&lt;/div&gt;</h2> */}
         </>
     );
 };
