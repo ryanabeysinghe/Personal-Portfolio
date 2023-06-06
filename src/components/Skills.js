@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import skillsCSS from '../styles/Skills.module.css'
 import TextAnimation from './TextAnimation';
+import { motion } from 'framer-motion';
 
 import ReactImg from '../../public/images/skills/react-transparent.png';
 import JavaImg from '../../public/images/skills/java-transparent.png';
@@ -49,9 +50,12 @@ const Skills = () => {
 
     return (
         <>
-            <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' />
-            {/* <h2 className='font-bold text-6xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2> */}
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
+                <h2 className='font-bold text-7xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2> 
+            </motion.div>
 
+            {/* <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' /> */}
+            
             <div className={`mt-10 flex w-full relative overflow-x-hidden ${skillsCSS.shadow}`}>
                 <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
                     {imageArray.map((path, index) => (
@@ -87,9 +91,11 @@ const Skills = () => {
                 </div>
             </div>
 
-            <TextAnimation text="&lt;/div&gt;" className='font-bold !text-7xl mt-10 w-full text-left' />
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
+                <h2 className='font-bold text-7xl mt-10 w-full text-left'>&lt;/div&gt;</h2>
+            </motion.div>
 
-            {/* <h2 className='font-bold text-6xl mt-10 w-full text-left'>&lt;/div&gt;</h2> */}
+            {/* <TextAnimation text="&lt;/div&gt;" className='font-bold !text-7xl mt-10 w-full text-left' /> */}
         </>
     );
 };

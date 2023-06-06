@@ -1,40 +1,62 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import TextAnimation from './TextAnimation';
+import { motion, useScroll } from 'framer-motion';
+import ProgressIndicator from './ProgressIndicator';
 
 const ExperienceDescription = ({ occupation, company, companyURL, date, address, description }) => {
 
-    return <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
-        <div>
-            <h3 className='capitalize font-bold text-2xl'>{occupation}</h3>
+    const ref = useRef(null);
 
-            <div>
-                <a href={companyURL} target={'_blank'} className='text-customRed uppercase font-semibold text-2xl'>{company}</a>
-            </div>
+    return (
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between'>
 
-            <span className='capitalize font-medium text-dark/75'>
-                {date} | <i>{address}</i>
-            </span>
+            <ProgressIndicator reference={ref} />
 
-            <ul className='font-medium w-full'>
-                {description.map((bulletPoint, index) => (
-                    <li key={index} className='ml-6'>
-                        &bull; {bulletPoint}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    </li>
-}
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} >
+                <h3 className='capitalize font-bold text-2xl'>{occupation}</h3>
+
+                <div>
+                    <a href={companyURL} target={'_blank'} className='text-customRed uppercase font-semibold text-xl'>{company}</a>
+                </div>
+
+                <span className='capitalize font-medium text-dark/75 text-lg'>
+                    {date} | <i>{address}</i>
+                </span>
+
+                <ul className='font-medium w-full text-lg'>
+                    {description.map((bulletPoint, index) => (
+                        <li key={index} className='ml-6'>
+                            &bull; {bulletPoint}
+                        </li>
+                    ))}
+                </ul>
+            </motion.div>
+        </li>
+    );
+};
 
 const Experience = () => {
+
+    const ref = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "center start"]
+    })
+
     return (
         <>
             <div className='my-64'>
-                <h2 className='font-bold text-8xl mb-32 w-full text-center'>Experience</h2>
 
-                <div className='w-[75%] mx-auto relative'>
+                <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
+                    <h2 className='font-bold text-7xl mb-32 w-full text-left'>&lt;div className = 'experience'&gt;</h2>
+                </motion.div>
 
-                    <ul>
+                <div ref={ref} className='w-[75%] mx-auto relative'>
+
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[98%] bg-dark origin-top' />
+
+                    <ul className='w-full flex flex-col items-start justify-between ml-24'>
                         <ExperienceDescription
                             occupation='software developer intern' company='finra' companyURL='https://www.finra.org/#/' date='May 2022 - August 2022' address='Rockville, MD'
                             description={[
@@ -55,7 +77,7 @@ const Experience = () => {
                         <ExperienceDescription
                             occupation='help desk analyst' company='westat' companyURL='https://www.westat.com/' date='July 2021 - May 2022' address='Rockville, MD'
                             description={[
-                                'Primary focus on PC/Laptop support, which includes new system preparation, system re-imaging, problem troubleshooting, repair, and shipping logistics', 
+                                'Primary focus on PC/Laptop support, which includes new system preparation, system re-imaging, problem troubleshooting, repair, and shipping logistics',
                                 'Established secure Wi-Fi, LAN, and VPN networks at remote locations, leading client/server configuration of crucial infrastructure to ensure seamless business operations',
                                 'Identified system hardware, network infrastructure, and connectivity issues that prevented execution of user-initiated tasks',
                             ]} />
@@ -63,6 +85,10 @@ const Experience = () => {
                     </ul>
 
                 </div>
+
+                <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
+                    <h2 className='font-bold text-7xl mt-32 w-full text-left'>&lt;/div&gt;</h2>
+                </motion.div>
 
             </div>
         </>
