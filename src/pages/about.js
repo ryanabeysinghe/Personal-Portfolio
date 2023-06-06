@@ -70,7 +70,7 @@ const About = () => {
 
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold'>
-                                    <NumAnimation num={5} />+
+                                    <NumAnimation num={10} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
                             </div>
