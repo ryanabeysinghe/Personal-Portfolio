@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 
 const NumAnimation = ({num}) => {
     const ref = useRef(null);
@@ -70,16 +71,16 @@ const About = () => {
 
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold'>
-                                    <NumAnimation num={10} />+
+                                    <NumAnimation num={3} />+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/75'>years of F/E experience</h2>
                             </div>
 
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold'>
-                                    <NumAnimation num={3} />+
+                                    <NumAnimation num={10} />+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>years of F/E experience</h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
                             </div>
 
                             <div className='flex flex-col items-end justify-center'>
@@ -94,7 +95,8 @@ const About = () => {
                     </div>
 
                 <Skills /> 
-                <Experience />   
+                <Experience />
+                <Education />   
 
                 </Layout>
 
