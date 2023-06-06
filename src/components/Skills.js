@@ -49,7 +49,7 @@ const Skills = () => {
 
     return (
         <>
-            <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold text-6xl mt-64 w-full text-left' />
+            <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' />
             {/* <h2 className='font-bold text-6xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2> */}
 
             <div className={`mt-10 flex w-full relative overflow-x-hidden ${skillsCSS.shadow}`}>
@@ -87,7 +87,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <TextAnimation text="&lt;/div&gt;" className='font-bold text-6xl mt-10 w-full text-left' />
+            <TextAnimation text="&lt;/div&gt;" className='font-bold !text-7xl mt-10 w-full text-left' />
 
             {/* <h2 className='font-bold text-6xl mt-10 w-full text-left'>&lt;/div&gt;</h2> */}
         </>
