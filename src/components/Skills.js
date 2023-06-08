@@ -30,7 +30,6 @@ const imageArray = [
     { src: NodeJSImg, alt: 'Node JS Logo', text: 'Node.js' },
     { src: DockerImg, alt: 'Docker Logo', text: 'Docker' },
     { src: PythonImg, alt: 'Python Logo', text: 'Python' },
-
     { src: GoogleFirebaseImg, alt: 'Google Firebase Logo', text: 'Google Firebase' },
     { src: ExpressJSImg, alt: 'Express JS Logo', text: 'Express.js' },
     { src: TailwindCSSImg, alt: 'Tailwind CSS Logo', text: 'Tailwind CSS' },
