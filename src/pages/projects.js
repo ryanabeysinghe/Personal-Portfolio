@@ -8,6 +8,7 @@ import Image from 'next/image';
 import RandSConstructionsWebsiteProj from '../../public/images/projects/RandSConstructionsWebsiteProj.png';
 import PersonalPortfolioWebsiteProj from '../../public/images/projects/PersonalPortfolioWebsiteProj.png';
 import COVID19DataScienceProj from '../../public/images/projects/COVID19DataScienceProj.png';
+import TerpExchangeProj from '../../public/images/projects/TerpExchangeProj.png';
 import { motion } from 'framer-motion';
 
 const MotionLink = motion(Link);
@@ -15,7 +16,10 @@ const MotionLink = motion(Link);
 const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-    <article className='w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
+    <article className='w-full flex relative items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
+
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark' />
+
       <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
         <Image src={projectImg} alt={projectTitle} className='w-full h-auto' />
       </Link>
@@ -27,10 +31,10 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
         </Link>
         <p className='my-2 font-medium text-dark'>{projectDescription}</p>
 
-        <div className='mt-2 flex items-center'>
-          <Link href={projectURL} target={"_blank"} 
-          className='rounded-lg p-2 px-6 bg-dark text-light text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700'>Visit Project</Link>
-          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{y: -4}} whileTap={{scale: 0.8}} className='w-10 ml-4'> <GithubIcon /> </MotionLink>
+        <div className='w-full mt-2 flex items-center justify-between'>
+          <Link href={projectURL} target={"_blank"}
+            className='rounded-lg p-2 px-6 bg-dark text-light text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700'>Visit Project</Link>
+          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4'> <GithubIcon /> </MotionLink>
         </div>
 
       </div>
@@ -39,10 +43,13 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
   );
 };
 
-const SmallScaleProject = ({projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL}) => {
+const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-   <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
+
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark' />
+
       <Link href={projectURL} target={"_blank"} className='w-full cursor-pointer overflow-hidden rounded-lg'>
         <Image src={projectImg} alt={projectTitle} className='w-full h-auto' />
       </Link>
@@ -55,14 +62,14 @@ const SmallScaleProject = ({projectImg, projectType, projectTitle, projectDescri
         <p className='my-2 font-medium text-dark'>{projectDescription}</p>
 
         <div className='w-full mt-2 flex items-center justify-between'>
-          <Link href={projectURL} target={"_blank"} 
-          className='rounded-lg p-2 px-6 bg-dark text-light text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700'>Visit Project</Link>
-          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{y: -4}} whileTap={{scale: 0.8}} className='w-10'> <GithubIcon /> </MotionLink>
+          <Link href={projectURL} target={"_blank"}
+            className='rounded-lg p-2 px-6 bg-dark text-light text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700'>Visit Project</Link>
+          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10'> <GithubIcon /> </MotionLink>
         </div>
 
       </div>
 
-   </article>
+    </article>
   );
 };
 
@@ -98,7 +105,7 @@ const projects = () => {
             </div>
 
             <div className='col-span-12'>
-              <LargeScaleProject projectImg={RandSConstructionsWebsiteProj} projectType='iOS App' projectTitle='TerpExchange'
+              <LargeScaleProject projectImg={TerpExchangeProj} projectType='iOS App' projectTitle='TerpExchange'
                 projectDescription='Developed iOS app in Swift, enabling students to buy and sell products seamlessly within the UMD campus community. Leveraged Google Firebase Authentication to establish a robust student-affiliated authentication system among UMD students, mitigating scam risks and ensuring secure access. '
                 gitHubURL='/' projectURL='/' />
             </div>
