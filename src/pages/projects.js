@@ -16,12 +16,12 @@ const MotionLink = motion(Link);
 const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-    <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
+    <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border-2 border-solid border-dark bg-light shadow-2xl p-12'>
 
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark' />
 
       <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
-        <Image src={projectImg} alt={projectTitle} className='w-full h-auto' />
+        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark rounded-[0.5rem]' />
       </Link>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
@@ -46,12 +46,12 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
 const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border-2 border-solid border-dark bg-light p-6 relative'>
 
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark' />
 
       <Link href={projectURL} target={"_blank"} className='w-full cursor-pointer overflow-hidden rounded-lg'>
-        <Image src={projectImg} alt={projectTitle} className='w-full h-auto' />
+        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark rounded-[0.5rem] bg-light' />
       </Link>
 
       <div className='w-full flex flex-col items-start justify-between mt-4'>
@@ -84,7 +84,7 @@ const projects = () => {
         <Layout className='pt-16'>
           <TextAnimation text="Inspire Change Through Design!" className='!text-7xl mb-16' />
 
-          <div className='grid grid-cols-12 gap-24'>
+          <div className='grid grid-cols-12 gap-24 gap-y-32'>
 
             <div className='col-span-12'>
               <LargeScaleProject projectImg={RandSConstructionsWebsiteProj} projectType='Featured Project' projectTitle='R & S Constructions LLC Website'
