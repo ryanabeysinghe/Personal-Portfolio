@@ -57,6 +57,15 @@ const Experience = () => {
                     <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[98%] bg-dark origin-top' />
 
                     <ul className='w-full flex flex-col items-start justify-between ml-24'>
+
+                        <ExperienceDescription
+                            occupation='full stack software developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='June 2023 - Present' address='Arlington, VA'
+                            description={[
+                                'Develop and maintain codebase for CTA/CES websites and related web initiatives',
+                                'Troubleshoot and debug web applications; leverage external experts for complex development needs',
+                                'Supports maintenance of websites by actively operating in CMS',
+                            ]} />
+
                         <ExperienceDescription
                             occupation='software developer intern' company='finra' companyURL='https://www.finra.org/#/' date='May 2022 - August 2022' address='Rockville, MD'
                             description={[

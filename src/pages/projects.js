@@ -16,7 +16,7 @@ const MotionLink = motion(Link);
 const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-    <article className='w-full flex relative items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
+    <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
 
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark' />
 
