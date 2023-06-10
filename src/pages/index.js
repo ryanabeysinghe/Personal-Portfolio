@@ -48,7 +48,7 @@ export default function Home() {
 
         <RA />
         <div className='absolute right-8 bottom-8 inline-block w-32 pointer-events-none'>
-          <Image src={programmingSymbol} alt="Programming Picture Symbol" className='w-full h-auto' />
+          <Image src={programmingSymbol} alt="Programming Picture Symbol" className='w-full h-auto fill-dark dark:fill-light' />
         </div>
       </main>
     </>
