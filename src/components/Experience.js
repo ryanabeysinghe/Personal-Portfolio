@@ -16,7 +16,7 @@ const ExperienceDescription = ({ occupation, company, companyURL, date, address,
                 <h3 className='capitalize font-bold text-2xl'>{occupation}</h3>
 
                 <div>
-                    <a href={companyURL} target={'_blank'} className='text-customRed uppercase font-semibold text-xl'>{company}</a>
+                    <a href={companyURL} target={'_blank'} className='text-primary uppercase font-semibold text-xl'>{company}</a>
                 </div>
 
                 <span className='capitalize font-medium text-dark/75 text-lg'>

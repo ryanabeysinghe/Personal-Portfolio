@@ -25,7 +25,7 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
       </Link>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-        <span className='text-primary font-medium text-xl'>{projectType}</span>
+        <span className='text-primary font-semibold text-xl'>{projectType}</span>
         <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-2'>
           <h2 className='mt-2 w-full text-left text-3xl font-bold'>{projectTitle}</h2>
         </Link>
@@ -55,7 +55,7 @@ const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
       </Link>
 
       <div className='w-full flex flex-col items-start justify-between mt-4'>
-        <span className='text-primary font-medium text-xl'>{projectType}</span>
+        <span className='text-primary font-semibold text-xl'>{projectType}</span>
         <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-2'>
           <h2 className='mt-2 w-full text-left text-3xl font-bold'>{projectTitle}</h2>
         </Link>
