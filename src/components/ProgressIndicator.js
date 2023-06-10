@@ -9,7 +9,7 @@ const ProgressIndicator = ({reference}) => {
     })
 
     return (
-        <figure className='absolute left-0 stroke-dark'>
+        <figure className='absolute left-0 stroke-dark -mt-4'>
             <svg className='-rotate-90' width='75' height='75' viewBox='0 0 100 100'>
                 <circle cx='50' cy='50' r='30' className='stroke-primary stroke-1 fill-none' />
                 <motion.circle cx='50' cy='50' r='30' className='stroke-[5px] fill-light' style={{ pathLength: scrollYProgress }} />
