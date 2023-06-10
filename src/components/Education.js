@@ -19,8 +19,8 @@ const EducationDescription = ({ degreeType, institution, institutionURL, date, G
                     <i>{minor}</i>
                 </span>
 
-                <div className='text-customRed uppercase font-semibold text-xl'>
-                    <a href={institutionURL} target={'_blank'} className='text-customRed uppercase font-semibold text-xl'>{institution}</a>
+                <div className='text-primary uppercase font-semibold text-xl'>
+                    <a href={institutionURL} target={'_blank'} className='text-primary uppercase font-semibold text-xl'>{institution}</a>
                 </div>
 
                 <span className='capitalize font-medium text-dark/75 text-lg'>
