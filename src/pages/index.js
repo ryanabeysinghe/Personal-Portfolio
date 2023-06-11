@@ -20,7 +20,8 @@ export default function Home() {
         <Layout className='pt-0'>
           <div className='flex items-center justify-between w-full'>
             <div className='w-1/3'> 
-              <Image src={profilePicture} alt="Ryan Abeysinghe" className='w-full h-auto pointer-events-none'/>
+              <Image src={profilePicture} alt="Ryan Abeysinghe" className='w-full h-auto pointer-events-none' priority 
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
             </div>
 
             <div className='w-1/2 flex flex-col items-center self-center'>
@@ -48,7 +49,8 @@ export default function Home() {
 
         <RA />
         <div className='absolute right-8 bottom-8 inline-block w-32 pointer-events-none'>
-          <Image src={programmingSymbol} alt="Programming Picture Symbol" className='w-full h-auto fill-dark dark:fill-light' />
+          <Image src={programmingSymbol} alt="Programming Picture Symbol" className='w-full h-auto fill-dark dark:fill-light' priority 
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
         </div>
       </main>
     </>

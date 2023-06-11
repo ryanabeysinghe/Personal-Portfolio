@@ -13,6 +13,8 @@ import { motion } from 'framer-motion';
 
 const MotionLink = motion(Link);
 
+const FramerImage = motion(Image);
+
 const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
@@ -21,7 +23,7 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light' />
 
       <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
-        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem]' />
+        <FramerImage src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem]' whileHover={{ scale: 1.10 }} transition={{ duration: 0.5 }} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
       </Link>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
@@ -51,7 +53,7 @@ const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
 
       <Link href={projectURL} target={"_blank"} className='w-full cursor-pointer overflow-hidden rounded-lg'>
-        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem] bg-light dark:bg-dark' />
+        <FramerImage src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem] bg-light dark:bg-dark' whileHover={{ scale: 1.10 }} transition={{ duration: 0.5 }} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
       </Link>
 
       <div className='w-full flex flex-col items-start justify-between mt-4'>
