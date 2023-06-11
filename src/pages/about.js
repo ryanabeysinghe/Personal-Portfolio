@@ -64,7 +64,8 @@ const About = () => {
 
                         <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark p-8'>
                             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
-                            <Image src={portraitPicture} alt='Ryan Abeysinghe Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' />
+                            <Image src={portraitPicture} alt='Ryan Abeysinghe Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
+                            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
                         </div>
 
                         <div className='col-span-2 flex flex-col items-end justify-between'>
