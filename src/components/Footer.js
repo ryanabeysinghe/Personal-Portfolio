@@ -6,10 +6,10 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
     return (
-        <footer className='w-full border-t-2 border-solid border-dark text-dark font-medium text-lg dark:border-light dark:text-light'>
-            <Layout className='py-8 flex items-center justify-between'>
+        <footer className='w-full border-t-2 border-solid border-dark text-dark font-medium text-lg dark:border-light dark:text-light sm:text-base'>
+            <Layout className='py-8 flex items-center justify-between lg:flex-col lg:py-6'>
                 <span>&copy; {new Date().getFullYear()} ~ All Rights Reserved</span>
-                <div className='flex items-center'>
+                <div className='flex items-center lg:py-2 '>
                     Built With <span className='text-primary dark:text-primary text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-4'>Ryan Abeysinghe</Link>
                 </div>
 

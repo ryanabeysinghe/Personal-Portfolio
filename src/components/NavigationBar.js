@@ -46,7 +46,9 @@ const NavigationBar = () => {
     }
 
     return (
-        <header className='w-full px-32 py-9 font-medium flex items-center justify-between border-b-2 border-solid border-dark dark:text-light dark:border-light relative'>
+        <header className='w-full px-32 py-9 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
+
+            {/* border-b-2 border-solid border-dark dark:border-light */}
 
             <button className='flex-col justify-center items-center hidden lg:flex' onClick={handleClick}>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>

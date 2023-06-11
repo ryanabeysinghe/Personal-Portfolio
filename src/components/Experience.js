@@ -8,22 +8,22 @@ const ExperienceDescription = ({ occupation, company, companyURL, date, address,
     const ref = useRef(null);
 
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
 
             <ProgressIndicator reference={ref} />
 
-            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} >
-                <h3 className='capitalize font-bold text-2xl text-dark dark:text-light'>{occupation}</h3>
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} className='md:-mt-2 xs:-mt-[0.5rem]' >
+                <h3 className='capitalize font-bold text-2xl text-dark dark:text-light sm:text-xl xs:text-base xxs:text-sm'>{occupation}</h3>
 
                 <div>
-                    <a href={companyURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl'>{company}</a>
+                    <a href={companyURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl sm:text-xl xs:text-base xxs:text-sm'>{company}</a>
                 </div>
 
-                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg xs:text-sm xxs:text-xs'>
                     {date} | <i>{address}</i>
                 </span>
 
-                <ul className='font-medium w-full text-lg text-dark dark:text-light'>
+                <ul className='font-medium w-full text-lg text-dark dark:text-light md:text-sm xxs:text-xs'>
                     {description.map((bulletPoint, index) => (
                         <li key={index} className='ml-6'>
                             &bull; {bulletPoint}
@@ -46,20 +46,20 @@ const Experience = () => {
 
     return (
         <>
-            <div className='my-64'>
+            <div className='my-64 md:my-32'>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light'>&lt;div className = 'experience'&gt;</h2>
+                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mb-16'>&lt;div className = 'experience'&gt;</h2>
                 </motion.div>
 
-                <div ref={ref} className='w-[75%] mx-auto relative'>
+                <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
-                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top' />
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]' />
 
-                    <ul className='w-full flex flex-col items-start justify-between ml-24'>
+                    <ul className='w-full flex flex-col items-start justify-between ml-24 md:ml-8 xs:ml-8'>
 
                         <ExperienceDescription
-                            occupation='full stack software developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='June 2023 - Present' address='Arlington, VA'
+                            occupation='full stack developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='June 2023 - Present' address='Arlington, VA'
                             description={[
                                 'Develop and maintain codebase for CTA/CES websites and related web initiatives',
                                 'Troubleshoot and debug web applications; leverage external experts for complex development needs',
@@ -96,7 +96,7 @@ const Experience = () => {
                 </div>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mt-32 w-full text-left text-dark dark:text-light'>&lt;/div&gt;</h2>
+                    <h2 className='font-bold text-7xl mt-32 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mt-16'>&lt;/div&gt;</h2>
                 </motion.div>
 
             </div>
