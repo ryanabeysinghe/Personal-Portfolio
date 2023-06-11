@@ -16,25 +16,25 @@ const MotionLink = motion(Link);
 const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-    <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border-2 border-solid border-dark bg-light shadow-2xl p-12'>
+    <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-2xl p-12'>
 
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark' />
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light' />
 
       <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
-        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark rounded-[0.5rem]' />
+        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem]' />
       </Link>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-        <span className='text-primary font-semibold text-xl'>{projectType}</span>
-        <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-2'>
-          <h2 className='mt-2 w-full text-left text-3xl font-bold'>{projectTitle}</h2>
+        <span className='text-primary dark:text-primary font-semibold text-xl'>{projectType}</span>
+        <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-4 text-dark dark:text-light'>
+          <h2 className='mt-2 w-full text-left text-3xl font-bold text-dark dark:text-light'>{projectTitle}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark'>{projectDescription}</p>
+        <p className='my-2 font-medium text-dark dark:text-light'>{projectDescription}</p>
 
         <div className='w-full mt-2 flex items-center justify-between'>
           <Link href={projectURL} target={"_blank"}
-            className='rounded-lg p-2 px-6 bg-dark text-light text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700'>Visit Project</Link>
-          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4'> <GithubIcon /> </MotionLink>
+            className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700'>Visit Project</Link>
+          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light'> <GithubIcon /> </MotionLink>
         </div>
 
       </div>
@@ -46,25 +46,25 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
 const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   return (
-    <article className='w-full flex flex-col items-center justify-center rounded-2xl border-2 border-solid border-dark bg-light p-6 relative'>
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark p-6 relative'>
 
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark' />
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
 
       <Link href={projectURL} target={"_blank"} className='w-full cursor-pointer overflow-hidden rounded-lg'>
-        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark rounded-[0.5rem] bg-light' />
+        <Image src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem] bg-light dark:bg-dark' />
       </Link>
 
       <div className='w-full flex flex-col items-start justify-between mt-4'>
-        <span className='text-primary font-semibold text-xl'>{projectType}</span>
-        <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-2'>
+        <span className='text-primary dark:text-primary font-semibold text-xl'>{projectType}</span>
+        <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-4 text-dark dark:text-light'>
           <h2 className='mt-2 w-full text-left text-3xl font-bold'>{projectTitle}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark'>{projectDescription}</p>
+        <p className='my-2 font-medium text-dark dark:text-light'>{projectDescription}</p>
 
         <div className='w-full mt-2 flex items-center justify-between'>
           <Link href={projectURL} target={"_blank"}
-            className='rounded-lg p-2 px-6 bg-dark text-light text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700'>Visit Project</Link>
-          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10'> <GithubIcon /> </MotionLink>
+            className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light hover:text-dark dark:hover:bg-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700'>Visit Project</Link>
+          <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 text-dark dark:text-light'> <GithubIcon /> </MotionLink>
         </div>
 
       </div>

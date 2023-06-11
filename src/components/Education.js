@@ -13,21 +13,21 @@ const EducationDescription = ({ degreeType, institution, institutionURL, date, G
             <ProgressIndicator reference={ref} />
 
             <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} >
-                <h3 className='font-bold text-2xl'><i>{degreeType}</i></h3>
+                <h3 className='font-bold text-2xl text-dark dark:text-light'><i>{degreeType}</i></h3>
 
-                <span className='font-medium text-dark/75 text-lg'>
+                <span className='font-medium text-dark/75 dark:text-light/75 text-lg'>
                     <i>{minor}</i>
                 </span>
 
-                <div className='text-primary uppercase font-semibold text-xl'>
-                    <a href={institutionURL} target={'_blank'} className='text-primary uppercase font-semibold text-xl'>{institution}</a>
+                <div className='text-primary dark:text-primary uppercase font-semibold text-xl'>
+                    <a href={institutionURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl'>{institution}</a>
                 </div>
 
-                <span className='capitalize font-medium text-dark/75 text-lg'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg'>
                     {date} | <i>{GPA}</i>
                 </span>
 
-                <ul className='font-medium w-full text-lg'>
+                <ul className='font-medium w-full text-lg text-dark dark:text-light'>
                     {description.map((bulletPoint, index) => (
                         <li key={index} className='ml-6'>
                             &bull; {bulletPoint}
@@ -53,12 +53,12 @@ const Education = () => {
             <div className='mt-64 mb-24'>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mb-32 w-full text-left'>&lt;div className = 'education'&gt;</h2>
+                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light'>&lt;div className = 'education'&gt;</h2>
                 </motion.div>
 
                 <div ref={ref} className='w-[75%] mx-auto relative'>
 
-                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[98%] bg-dark origin-top' />
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[98%] bg-dark dark:bg-light origin-top' />
 
                     <ul className='w-full flex flex-col items-start justify-between ml-24'>
 
@@ -83,7 +83,7 @@ const Education = () => {
                 </div>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mt-32 w-full text-left'>&lt;/div&gt;</h2>
+                    <h2 className='font-bold text-7xl mt-32 w-full text-left text-dark dark:text-light'>&lt;/div&gt;</h2>
                 </motion.div>
 
             </div>
