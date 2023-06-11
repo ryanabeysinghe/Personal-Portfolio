@@ -28,3 +28,24 @@
     top: 0;
     transform: rotateZ(180deg);
 }
+
+.darkShadow::before,
+.darkShadow::after {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(40, 40, 43, 1) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 10%;
+    z-index: 2;
+}
+
+.darkShadow::before {
+    left: 0;
+    right: 0;
+}
+
+.darkShadow::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}

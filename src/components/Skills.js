@@ -46,11 +46,11 @@ const Skills = () => {
     const handleMouseLeave = () => {
         setHoveredIndex(-1);
     };
-
+ 
     return (
         <>
             <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                <h2 className='font-bold text-7xl mt-64 w-full text-left'>&lt;div className = 'skills'&gt;</h2> 
+                <h2 className='font-bold text-7xl mt-64 w-full text-left text-dark dark:text-light'>&lt;div className = 'skills'&gt;</h2> 
             </motion.div>
 
             {/* <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' /> */}
@@ -68,7 +68,7 @@ const Skills = () => {
                             <div className={skillsCSS.imageContainer}>
                                 <Image src={path.src} alt={path.alt} className="w-full" />
                             </div>
-                            <p className="mt-2 text-center text-lg font-medium">{path.text}</p>
+                            <p className="mt-2 text-center text-lg font-medium text-dark dark:text-light">{path.text}</p>
                         </div>
                     ))}
                 </div>
@@ -84,14 +84,14 @@ const Skills = () => {
                             <div className={skillsCSS.imageContainer}>
                                 <Image src={path.src} alt={path.alt} className="w-full" />
                             </div>
-                            <p className="mt-2 text-center text-lg font-medium">{path.text}</p>
+                            <p className="mt-2 text-center text-lg font-medium text-dark dark:text-light">{path.text}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
             <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                <h2 className='font-bold text-7xl mt-10 w-full text-left'>&lt;/div&gt;</h2>
+                <h2 className='font-bold text-7xl mt-10 w-full text-left text-dark dark:text-light'>&lt;/div&gt;</h2>
             </motion.div>
 
             {/* <TextAnimation text="&lt;/div&gt;" className='font-bold !text-7xl mt-10 w-full text-left' /> */}

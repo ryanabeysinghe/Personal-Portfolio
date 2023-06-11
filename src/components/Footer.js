@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
     return (
-        <footer className='w-full border-t-2 border-solid border-dark font-medium text-lg'>
+        <footer className='w-full border-t-2 border-solid border-dark text-dark font-medium text-lg dark:border-light dark:text-light'>
             <Layout className='py-8 flex items-center justify-between'>
                 <span>&copy; {new Date().getFullYear()} ~ All Rights Reserved</span>
                 <div className='flex items-center'>
