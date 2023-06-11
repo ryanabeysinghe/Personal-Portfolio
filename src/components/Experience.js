@@ -13,17 +13,17 @@ const ExperienceDescription = ({ occupation, company, companyURL, date, address,
             <ProgressIndicator reference={ref} />
 
             <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} >
-                <h3 className='capitalize font-bold text-2xl'>{occupation}</h3>
+                <h3 className='capitalize font-bold text-2xl text-dark dark:text-light'>{occupation}</h3>
 
                 <div>
-                    <a href={companyURL} target={'_blank'} className='text-primary uppercase font-semibold text-xl'>{company}</a>
+                    <a href={companyURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl'>{company}</a>
                 </div>
 
-                <span className='capitalize font-medium text-dark/75 text-lg'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg'>
                     {date} | <i>{address}</i>
                 </span>
 
-                <ul className='font-medium w-full text-lg'>
+                <ul className='font-medium w-full text-lg text-dark dark:text-light'>
                     {description.map((bulletPoint, index) => (
                         <li key={index} className='ml-6'>
                             &bull; {bulletPoint}
@@ -49,12 +49,12 @@ const Experience = () => {
             <div className='my-64'>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mb-32 w-full text-left'>&lt;div className = 'experience'&gt;</h2>
+                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light'>&lt;div className = 'experience'&gt;</h2>
                 </motion.div>
 
                 <div ref={ref} className='w-[75%] mx-auto relative'>
 
-                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' />
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top' />
 
                     <ul className='w-full flex flex-col items-start justify-between ml-24'>
 
@@ -96,7 +96,7 @@ const Experience = () => {
                 </div>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mt-32 w-full text-left'>&lt;/div&gt;</h2>
+                    <h2 className='font-bold text-7xl mt-32 w-full text-left text-dark dark:text-light'>&lt;/div&gt;</h2>
                 </motion.div>
 
             </div>
