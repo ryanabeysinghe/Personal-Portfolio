@@ -24,7 +24,7 @@ const NavigationBar = () => {
     const [mode, setMode] = useSwitchTheme();
 
     return (
-        <header className='w-full px-32 py-9 font-medium flex items-center justify-between border-b-2 border-solid border-dark dark:text-light'>
+        <header className='w-full px-32 py-9 font-medium flex items-center justify-between border-b-2 border-solid border-dark dark:text-light dark:border-light'>
             <nav>
                 <CustomLink href="/" title="Home" className='mr-4 uppercase' />
                 <CustomLink href="/about" title="About" className='mx-4 uppercase' />
@@ -58,7 +58,7 @@ const NavigationBar = () => {
             </div>
 
         </header>
-    )
-}
+    );
+};
 
-export default NavigationBar
+export default NavigationBar;
