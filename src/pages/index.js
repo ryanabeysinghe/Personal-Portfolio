@@ -7,7 +7,7 @@ import Image from 'next/image'
 import profilePicture from '../../public/images/profile/portfolioPFP.png'
 import Link from 'next/link'
 import { LinkArrow } from '@/components/SocialMediaIcons'
-import programmingSymbol from '../../public/images/svgs/programmingSymbol.svg'
+import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
 
 import tempPic from '../../public/images/profile/tempPic.png'
 

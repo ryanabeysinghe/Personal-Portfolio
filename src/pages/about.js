@@ -8,6 +8,7 @@ import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
+import RA from '@/components/RA'
 
 const NumAnimation = ({num}) => {
     const ref = useRef(null);
@@ -32,8 +33,10 @@ const NumAnimation = ({num}) => {
       })
     }, [springVal, num])
     
-    return <span ref={ref}></span>
-}
+    return (
+        <span ref={ref}></span>
+    );
+};
 
 const About = () => {
     return (
@@ -100,6 +103,8 @@ const About = () => {
                 <Education />   
 
                 </Layout>
+
+                <RA />
 
             </main>
         </>

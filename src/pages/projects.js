@@ -10,6 +10,7 @@ import PersonalPortfolioWebsiteProj from '../../public/images/projects/PersonalP
 import COVID19DataScienceProj from '../../public/images/projects/COVID19DataScienceProj.png';
 import TerpExchangeProj from '../../public/images/projects/TerpExchangeProj.png';
 import { motion } from 'framer-motion';
+import RA from '@/components/RA';
 
 const MotionLink = motion(Link);
 
@@ -124,6 +125,8 @@ const projects = () => {
 
 
         </Layout>
+        <RA />
+
       </main>
     </>
   );
