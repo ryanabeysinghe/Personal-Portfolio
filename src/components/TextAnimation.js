@@ -30,7 +30,7 @@ const animateSingleCharacters = {
 
 const TextAnimation = ({text, className=""}) => {
   return (
-    <div className='w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden'>
+    <div className='w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0'>
         <motion.h1 className={`inline-block w-full text-dark dark:text-light font-bold text-8xl ${className}`} variants={animatefadeInAndOut} initial="initial" animate="animate">
             {
                 text.split(" ").map((word, index) => 

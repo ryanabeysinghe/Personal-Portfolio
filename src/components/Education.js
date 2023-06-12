@@ -8,26 +8,26 @@ const EducationDescription = ({ degreeType, institution, institutionURL, date, G
     const ref = useRef(null);
 
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
 
             <ProgressIndicator reference={ref} />
 
-            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} >
-                <h3 className='font-bold text-2xl text-dark dark:text-light'><i>{degreeType}</i></h3>
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} className='md:-mt-2 xs:-mt-[0.5rem]' >
+                <h3 className='font-bold text-2xl text-dark dark:text-light sm:text-xl xs:text-base xxs:text-sm'><i>{degreeType}</i></h3>
 
-                <span className='font-medium text-dark/75 dark:text-light/75 text-lg'>
+                <span className='font-medium text-dark/75 dark:text-light/75 text-lg xs:text-sm xxs:text-xs'>
                     <i>{minor}</i>
                 </span>
 
                 <div className='text-primary dark:text-primary uppercase font-semibold text-xl'>
-                    <a href={institutionURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl'>{institution}</a>
+                    <a href={institutionURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl sm:text-xl xs:text-base xxs:text-sm'>{institution}</a>
                 </div>
 
-                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg xs:text-sm xxs:text-xs'>
                     {date} | <i>{GPA}</i>
                 </span>
 
-                <ul className='font-medium w-full text-lg text-dark dark:text-light'>
+                <ul className='font-medium w-full text-lg text-dark dark:text-light md:text-sm xxs:text-xs'>
                     {description.map((bulletPoint, index) => (
                         <li key={index} className='ml-6'>
                             &bull; {bulletPoint}
@@ -50,21 +50,21 @@ const Education = () => {
 
     return (
         <>
-            <div className='mt-64 mb-24'>
+            <div className='mt-64 mb-24 md:my-32'>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light'>&lt;div className = 'education'&gt;</h2>
+                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mb-16'>&lt;div className = 'education'&gt;</h2>
                 </motion.div>
 
-                <div ref={ref} className='w-[75%] mx-auto relative'>
+                <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
-                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[98%] bg-dark dark:bg-light origin-top' />
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[98%] bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]' />
 
-                    <ul className='w-full flex flex-col items-start justify-between ml-24'>
+                    <ul className='w-full flex flex-col items-start justify-between ml-24 md:ml-8 xs:ml-8'>
 
                         <EducationDescription degreeType='Bachelor of Science in Computer Science' minor='Minor in Global Engineering Leadership'
-                        institution='University of Maryland - College Park'
-                        institutionURL='https://www.umd.edu/' date='august 2019 - december 2023' GPA='cumulative GPA: 3.62'
+                        institution='University of Maryland'
+                        institutionURL='https://www.umd.edu/' date='august 2019 - december 2023' GPA='GPA: 3.62'
                         description={[
                             'Relevant Courswork: Object-Oriented Programming, Introduction to Computer Systems & Data Science, Algorithms, Web Application Development with JavaScript, Data Structures, Programming Handheld Systems, Computer Vision',
                             'Awards/Scholarships: Dean’s List, Clifford & Camille Kendall CMNS Scholarship, CMNS Undergraduate Scholarship',
@@ -72,7 +72,7 @@ const Education = () => {
 
                         <EducationDescription degreeType='High School Diploma'
                         institution='Watkins Mill High School'
-                        institutionURL='https://www2.montgomeryschoolsmd.org/schools/watkinsmillhs' date='august 2015 - june 2019' GPA='cumulative GPA: 3.50'
+                        institutionURL='https://www2.montgomeryschoolsmd.org/schools/watkinsmillhs' date='august 2015 - june 2019' GPA='GPA: 3.50'
                         description={[
                             'Organizations: National Honor Society, Project Lead the Way, Computer Science Club',
                             "Extracurricular Activities: Varsity Men's Football & Lacrosse",
@@ -83,7 +83,7 @@ const Education = () => {
                 </div>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mt-32 w-full text-left text-dark dark:text-light'>&lt;/div&gt;</h2>
+                    <h2 className='font-bold text-7xl mt-32 mb-44 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mt-16'>&lt;/div&gt;</h2>
                 </motion.div>
 
             </div>
