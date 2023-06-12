@@ -14,7 +14,7 @@ const CustomLink = ({ href, title, className = "" }) => {
         <Link href={href} className={`${className} relative group`}>
             {title}
 
-            <span className={`h-[2px] inline-block w-0 bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${router.asPath === href ? 'w-full' : 'w-0'}`}>&nbsp;</span>
+            <span className={`h-[2.5px] inline-block w-0 bg-primary absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 dark:bg-primary ${router.asPath === href ? 'w-full' : 'w-0'}`}>&nbsp;</span>
         </Link>
     );
 };
@@ -31,7 +31,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
         <button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
             {title}
 
-            <span className={`h-[2px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-dark ${router.asPath === href ? 'w-full' : 'w-0'}`}>&nbsp;</span>
+            <span className={`h-[2.5px] inline-block bg-primary absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300 dark:bg-primary ${router.asPath === href ? 'w-full' : 'w-0'}`}>&nbsp;</span>
         </button>
     );
 };
@@ -46,14 +46,16 @@ const NavigationBar = () => {
     }
 
     return (
-        <header className='w-full px-32 py-9 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
+        <header className='w-full px-32 py-9 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8 border-b-2 border-solid border-dark dark:border-light lg:pb-[2.6rem]'>
 
             {/* border-b-2 border-solid border-dark dark:border-light */}
 
-            <button className='flex-col justify-center items-center hidden lg:flex' onClick={handleClick}>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
+            {/* Responsive Mobile Nav Bar Icon */}
+
+            <button className='flex-col justify-center items-center hidden mt-2 lg:flex' onClick={handleClick}>
+                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'}`}></span>
             </button>
 
             {/* Desktop Navigation Menu */}
@@ -67,20 +69,20 @@ const NavigationBar = () => {
                 </nav>
 
                 <nav className='flex items-center justify-center flex-wrap'>
-                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mr-3'>
+                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.6rem] mr-3 mb-[0.1rem]'>
                         <GithubIcon />
                     </motion.a>
                     <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3'>
                         <LinkedInIcon />
                     </motion.a>
-                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 mb-[0.5px]'>
+                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 mb-[0.01rem]'>
                         <InstagramIcon />
                     </motion.a>
 
-                    <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
+                    <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
                         {
                             mode === 'dark' ?
-                                <SunIcon className='fill-dark w-4 h-4' /> : <MoonIcon className='fill-dark w-4 h-4' />
+                                <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
                         }
 
                     </motion.button>
@@ -93,26 +95,26 @@ const NavigationBar = () => {
 
             {
                 isOpen ?
-                    <motion.div initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }} animate={{ scale: 1, opacity: 1}} transition={{ duration: 0.5 }} className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
+                    <motion.div initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }} animate={{ scale: 1, opacity: 1}} transition={{ duration: 0.5 }} className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-10'>
                         <nav className='flex items-center flex-col justify-center'>
-                            <CustomMobileLink href="/" title="home" className='uppercase' toggle={handleClick} />
-                            <CustomMobileLink href="/about" title="about" className='uppercase' toggle={handleClick} />
-                            <CustomMobileLink href="/projects" title="projects" className='uppercase' toggle={handleClick} />
-                            <CustomMobileLink href="/contact" title="contact" className='uppercase' toggle={handleClick} />
+                            <CustomMobileLink href="/" title="home" className='uppercase my-5' toggle={handleClick} />
+                            <CustomMobileLink href="/about" title="about" className='uppercase my-5' toggle={handleClick} />
+                            <CustomMobileLink href="/projects" title="projects" className='uppercase my-5' toggle={handleClick} />
+                            <CustomMobileLink href="/contact" title="contact" className='uppercase my-5' toggle={handleClick} />
                         </nav>
 
-                        <nav className='flex items-center justify-center flex-wrap mt-6'>
-                            <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mr-3 sm:mx-1'>
-                                <LinkedInIcon />
-                            </motion.a>
-                            <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 sm:mx-1 text-light dark:text-dark'>
+                        <nav className='flex items-center justify-center flex-wrap my-5'>
+                            <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.6rem] mr-3 mb-[0.1rem] text-light dark:text-dark'>
                                 <GithubIcon />
                             </motion.a>
-                            <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 ml-3 mt-[1px] sm:mx-1'>
+                            <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3'>
+                                <LinkedInIcon />
+                            </motion.a>
+                            <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 mb-[0.01rem]'>
                                 <InstagramIcon />
                             </motion.a>
 
-                            <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `}>
+                            <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `}>
                                 {
                                     mode === 'dark' ?
                                         <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />

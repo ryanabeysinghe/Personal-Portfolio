@@ -27,7 +27,7 @@ export default function Home() {
             </div>
 
             <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
-              <TextAnimation text="Hello, I'm Ryan!" className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'/>
+              <TextAnimation text="Hello, I'm Ryan!" className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xxxs:!text-left'/>
               <TextAnimation text="I'm a Software Engineer based in College Park, Maryland. As a full-stack developer, my unwavering focus is on transforming concepts into cutting-edge web applications. 
                 Delve into my most recent experience, projects, and education, showcasing my knowledge in React using Next.js, JavaScript, HTML, CSS, and the field of software engineering. " 
                 className='my-4 text-base font-medium !text-left capitalize md:text-sm sm:text-xs'/>

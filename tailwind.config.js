@@ -58,7 +58,10 @@ module.exports = {
       // => @media (max-width: 479px) { ... }
 
       'xxs': { max: '415px' },
-      // => @media (max-width: 400px) { ... }
+      // => @media (max-width: 415px) { ... }
+
+      'xxxs': { max: '350px' },
+      // => @media (max-width: 350px) { ... }
     },
   },
   plugins: [],
