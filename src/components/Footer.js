@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <footer className='w-full border-t-2 border-solid border-dark text-dark font-medium text-lg dark:border-light dark:text-light sm:text-base'>
-            <Layout className='py-8 flex items-center justify-between lg:flex-col lg:py-6'>
+            <Layout className='py-8 flex items-center justify-between xl:py-8 lg:flex-col lg:py-6 md:py-6 sm:py-6'>
                 <span>&copy; {new Date().getFullYear()} ~ All Rights Reserved</span>
                 <div className='flex items-center lg:py-2 xxxs:text-sm'>
                     Built With <span className='text-primary dark:text-primary text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-4'>Ryan Abeysinghe</Link>
