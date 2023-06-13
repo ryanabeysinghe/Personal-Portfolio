@@ -1,9 +1,19 @@
-import React from 'react'
+import Head from 'next/head';
+import React from 'react';
 
 const contact = () => {
   return (
-    <div>contact</div>
-  )
-}
+    <>
+    <Head>
+      <title>Contact | Ryan Abeysinghe</title>
+      <meta name='description' content='' />
+    </Head>
 
-export default contact
+    <main>
+      <h2>Contact Page</h2>
+    </main>
+    </>
+  );
+};
+
+export default contact;
