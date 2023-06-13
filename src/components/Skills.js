@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import Image from 'next/image'
 import Link from 'next/link'
+
 import skillsCSS from '../styles/Skills.module.css'
-import TextAnimation from './TextAnimation';
+import { useTheme } from '@/components/ThemeContext';
 import { motion } from 'framer-motion';
 
 import ReactImg from '../../public/images/skills/react-transparent.png';
@@ -39,6 +41,7 @@ const imageArray = [
 
 const Skills = () => {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
+    const { mode } = useTheme();
 
     const handleHover = (index) => {
         setHoveredIndex(index);
@@ -56,7 +59,7 @@ const Skills = () => {
 
             {/* <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' /> */}
 
-            <div className={`mt-10 flex w-full relative overflow-x-hidden ${skillsCSS.shadow}`}>
+            <div className={`mt-10 flex w-full relative overflow-x-hidden ${mode === 'light' ? skillsCSS.shadow : skillsCSS.darkShadow}`}>
                 <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
                     {imageArray.map((path, index) => (
                         <div
