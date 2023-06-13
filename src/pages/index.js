@@ -1,15 +1,15 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import Layout from '@/components/Layout'
 import TextAnimation from '@/components/TextAnimation'
 import RA from '@/components/RA'
-
-import Head from 'next/head'
-import Image from 'next/image'
-import profilePicture from '../../public/images/profile/portfolioPFP.png'
-import Link from 'next/link'
 import { LinkArrow } from '@/components/SocialMediaIcons'
-import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
 
-import portraitPicture from '../../public/images/profile/portraitPicture.jpg'
+import mainPortfolioPicture from '../../public/images/profile/mainPortfolioPicture.png'
+import mainPortfolioPicture_2 from '../../public/images/profile/mainPortfolioPicture_2.png'
+// import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
 
 export default function Home() {
   return (
@@ -21,32 +21,36 @@ export default function Home() {
       <main className='flex w-full flex-col items-center justify-center text-dark dark:text-light'>
         <Layout className='pt-16 xl:pt-16 md:pt-16 sm:pt-8'>
 
-          <TextAnimation text="Hello, I'm Ryan!" className='mb-16 !text-7xl lg:!text-7xl md:!text-6xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
+          <TextAnimation text="Hello, I'm Ryan!" className='mb-16 !text-7xl lg:!text-7xl md:!text-6xl sm:!text-5xl xs:!text-4xl xxs:!text-3xl sm:mb-8' />
           <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
             
-            <div className='col-span-3 flex flex-col items-center justify-start xl:col-span-4 md:order-2 md:col-span-8 md:mt-8'>
-              <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Welcome</h2>
-              <p className='font-medium text-dark dark:text-light'>
+            <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8 md:mt-8'>
+              <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>Welcome</h2>
+
+              <div className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
+                {/* <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' /> */}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
-              </p>
+              </div>
 
-              <p className='mt-4 font-medium text-dark dark:text-light'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse in est ante in nibh. Et tortor at risus viverra adipiscing at in.
-              </p>
+              <div className='my-4 font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
+                {/* <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' /> */}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
+              </div>
 
-              <p className='mt-4 font-medium text-dark dark:text-light'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean et tortor at risus viverra adipiscing at. Blandit massa enim nec dui nunc mattis enim.
-              </p>
+              <div className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
+                {/* <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' /> */}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
+              </div>
 
             </div>
 
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
-              <Image src={portraitPicture} alt='Ryan Abeysinghe Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
+              <Image src={mainPortfolioPicture_2} alt='Ryan Abeysinghe Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
             </div>
 
-            <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col xs:-mb-14'>
+            <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col md:-mb-8 xs:-mb-[4.5rem]'>
 
               <div className='flex flex-col items-end justify-center xl:items-center'>
                 {/* <span className='inline-block text-7xl font-bold text-dark dark:text-light md:text-6xl sm:text-5xl xs:text-4xl'>
