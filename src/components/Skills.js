@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
 import Image from 'next/image'
+import Link from 'next/link'
+
 import skillsCSS from '../styles/Skills.module.css'
-import TextAnimation from './TextAnimation';
+import { useTheme } from '@/components/ThemeContext';
 import { motion } from 'framer-motion';
 
 import ReactImg from '../../public/images/skills/react-transparent.png';
@@ -20,24 +23,25 @@ import GoogleFirebaseImg from '../../public/images/skills/googleFirebase-transpa
 import TailwindCSSImg from '../../public/images/skills/tailwindCSS-transparent.png';
 
 const imageArray = [
-    { src: JavaImg, alt: 'Java Logo', text: 'Java' },
-    { src: ReactImg, alt: 'React Logo', text: 'React' },
-    { src: GitImg, alt: 'Git Logo', text: 'Git' },
-    { src: HTMLImg, alt: 'HTML Logo', text: 'HTML' },
-    { src: CSSImg, alt: 'CSS Logo', text: 'CSS' },
-    { src: NextJSImg, alt: 'Next.js Logo', text: 'Next.js' },
-    { src: SwiftImg, alt: 'Swift Logo', text: 'Swift' },
-    { src: NodeJSImg, alt: 'Node JS Logo', text: 'Node.js' },
-    { src: DockerImg, alt: 'Docker Logo', text: 'Docker' },
-    { src: PythonImg, alt: 'Python Logo', text: 'Python' },
-    { src: GoogleFirebaseImg, alt: 'Google Firebase Logo', text: 'Google Firebase' },
-    { src: ExpressJSImg, alt: 'Express JS Logo', text: 'Express.js' },
-    { src: TailwindCSSImg, alt: 'Tailwind CSS Logo', text: 'Tailwind CSS' },
-    { src: MongoDBImg, alt: 'Mongo DB Logo', text: 'Mongo DB' },
+    { src: JavaImg, alt: 'Java Logo', text: 'Java', source: 'https://www.java.com/en/' },
+    { src: ReactImg, alt: 'React Logo', text: 'React', source: 'https://react.dev/' },
+    { src: GitImg, alt: 'Git Logo', text: 'Git', source: 'https://git-scm.com/' },
+    { src: HTMLImg, alt: 'HTML Logo', text: 'HTML', source: 'https://html.com/' },
+    { src: CSSImg, alt: 'CSS Logo', text: 'CSS', source: 'https://www.w3.org/' },
+    { src: NextJSImg, alt: 'Next.js Logo', text: 'Next.js', source: 'https://nextjs.org/' },
+    { src: SwiftImg, alt: 'Swift Logo', text: 'Swift', source: 'https://www.swift.org/' },
+    { src: NodeJSImg, alt: 'Node JS Logo', text: 'Node.js', source: 'https://nodejs.org/en' },
+    { src: DockerImg, alt: 'Docker Logo', text: 'Docker', source: 'https://www.docker.com/' },
+    { src: PythonImg, alt: 'Python Logo', text: 'Python', source: 'https://www.python.org/' },
+    { src: GoogleFirebaseImg, alt: 'Google Firebase Logo', text: 'Google Firebase', source: 'https://firebase.google.com/' },
+    { src: ExpressJSImg, alt: 'Express JS Logo', text: 'Express.js', source: 'https://expressjs.com/' },
+    { src: TailwindCSSImg, alt: 'Tailwind CSS Logo', text: 'Tailwind CSS', source: 'https://tailwindcss.com/' },
+    { src: MongoDBImg, alt: 'Mongo DB Logo', text: 'Mongo DB', source: 'https://www.mongodb.com/' },
 ];
 
 const Skills = () => {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
+    const { mode } = useTheme();
 
     const handleHover = (index) => {
         setHoveredIndex(index);
@@ -46,16 +50,16 @@ const Skills = () => {
     const handleMouseLeave = () => {
         setHoveredIndex(-1);
     };
- 
+
     return (
         <>
-            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                <h2 className='font-bold text-7xl mt-64 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl md:mt-32'>&lt;div className = 'skills'&gt;</h2> 
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring' }}>
+                <h2 className='font-bold text-7xl mt-64 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl md:mt-32'>&lt;div className = 'skills'&gt;</h2>
             </motion.div>
 
             {/* <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' /> */}
-            
-            <div className={`mt-10 flex w-full relative overflow-x-hidden ${skillsCSS.shadow}`}>
+
+            <div className={`mt-10 flex w-full relative overflow-x-hidden ${mode === 'light' ? skillsCSS.shadow : skillsCSS.darkShadow}`}>
                 <div className={`flex py-12 ${hoveredIndex !== -1 ? skillsCSS['animate-paused'] : ''} whitespace-nowrap animate-marquee`}>
                     {imageArray.map((path, index) => (
                         <div
@@ -66,7 +70,9 @@ const Skills = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className={skillsCSS.imageContainer}>
-                                <Image src={path.src} alt={path.alt} className="w-full" />
+                                <Link href={`${path.source}`} target='_blank' rel="noopener noreferrer">
+                                    <Image src={path.src} alt={path.alt} className="w-full" />
+                                </Link>
                             </div>
                             <p className="mt-2 text-center text-lg font-medium text-dark dark:text-light">{path.text}</p>
                         </div>
@@ -82,7 +88,9 @@ const Skills = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className={skillsCSS.imageContainer}>
-                                <Image src={path.src} alt={path.alt} className="w-full" />
+                                <Link href={`${path.source}`} target='_blank' rel="noopener noreferrer">
+                                    <Image src={path.src} alt={path.alt} className="w-full" />
+                                </Link>
                             </div>
                             <p className="mt-2 text-center text-lg font-medium text-dark dark:text-light">{path.text}</p>
                         </div>
@@ -90,7 +98,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
+            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring' }}>
                 <h2 className='font-bold text-7xl mt-10 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl md:mb-32'>&lt;/div&gt;</h2>
             </motion.div>
 

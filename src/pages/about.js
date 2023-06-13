@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react'
-import Head from 'next/head'
-import TextAnimation from '@/components/TextAnimation'
-import Layout from '@/components/Layout'
-import Image from 'next/image'
 import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
 
+import Head from 'next/head'
+import Image from 'next/image'
+
+import TextAnimation from '@/components/TextAnimation'
+import Layout from '@/components/Layout'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
