@@ -3,11 +3,9 @@ import Layout from '@/components/Layout'
 import Link from 'next/link'
 import { GithubIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon } from '@/components/SocialMediaIcons'
 import { motion } from 'framer-motion'
-import useSwitchTheme from './hooks/useSwitchTheme'
+import ThemeManager from './ThemeManager';
 
 const Footer = () => {
-    
-    const [mode, setMode] = useSwitchTheme();
 
     return (
         <footer className='w-full border-t-2 border-solid font-medium text-lg border-dark text-dark dark:border-light dark:text-light sm:text-base'>
@@ -28,16 +26,28 @@ const Footer = () => {
                         <InstagramIcon />
                     </motion.a>
 
-                    <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 lg:ml-5 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
+                    <ThemeManager />
+
+                    {/* <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 lg:ml-5 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
                         {
                             mode === 'dark' ?
                                 <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
                         }
 
-                    </motion.button>
-                </div>
+                    </motion.button> */}
 
-                {/* <Link href="">Say Hello</Link> */}
+                    {/* <ThemeManager>
+                        {({ mode, toggleMode }) => (
+                            <motion.button onClick={toggleMode} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
+                                {
+                                    mode === 'dark' ?
+                                        <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
+                                }
+                            </motion.button>
+                        )}
+                    </ThemeManager> */}
+
+                </div>
 
             </Layout>
         </footer>

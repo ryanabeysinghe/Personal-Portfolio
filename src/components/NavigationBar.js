@@ -4,8 +4,9 @@ import Logo from '@/components/Logo'
 import { useRouter } from 'next/router'
 import { GithubIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon, YouTubeIcon } from '@/components/SocialMediaIcons'
 import { motion } from 'framer-motion'
-import { useTheme } from 'styled-components'
+//import { useTheme } from 'styled-components'
 import useSwitchTheme from './hooks/useSwitchTheme'
+import ThemeManager from './ThemeManager';
 
 const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
@@ -38,7 +39,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
 const NavigationBar = () => {
 
-    const [mode, setMode] = useSwitchTheme();
+    //const [mode, setMode] = useSwitchTheme();
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -79,14 +80,27 @@ const NavigationBar = () => {
                         <InstagramIcon />
                     </motion.a>
 
-                    <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
+                    <ThemeManager />
+
+                    {/* <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'} `} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
                         {
                             mode === 'dark' ?
                                 <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
                         }
 
-                    </motion.button>
+                    </motion.button> */}
 
+                    {/* <ThemeManager>
+                        {({ mode, toggleMode }) => (
+                            <motion.button onClick={toggleMode} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }}>
+                                {
+                                    mode === 'dark' ?
+                                        <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
+                                }
+                            </motion.button>
+                        )}
+                    </ThemeManager> */}
+ 
                 </nav>
             </div>
 
@@ -95,7 +109,7 @@ const NavigationBar = () => {
 
             {
                 isOpen ?
-                    <motion.div initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }} animate={{ scale: 1, opacity: 1}} transition={{ duration: 0.5 }} className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-10'>
+                    <motion.div initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }} className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-10'>
                         <nav className='flex items-center flex-col justify-center'>
                             <CustomMobileLink href="/" title="home" className='uppercase my-5' toggle={handleClick} />
                             <CustomMobileLink href="/about" title="about" className='uppercase my-5' toggle={handleClick} />
@@ -114,13 +128,15 @@ const NavigationBar = () => {
                                 <InstagramIcon />
                             </motion.a>
 
-                            <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
+                            {/* <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
                                 {
                                     mode === 'dark' ?
                                         <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
                                 }
 
-                            </button>
+                            </button> */}
+
+                            <ThemeManager />
 
                         </nav>
                     </motion.div>
@@ -134,5 +150,7 @@ const NavigationBar = () => {
         </header>
     );
 };
+
+
 
 export default NavigationBar;
