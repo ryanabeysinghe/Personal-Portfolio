@@ -50,7 +50,7 @@ export default function Home() {
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
             </div>
 
-            <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col md:-mb-8 xs:-mb-[4.5rem]'>
+            <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col md:-mb-8 xs:-mb-[4.5rem] xs:mr-3'>
 
               <div className='flex flex-col items-end justify-center xl:items-center'>
                 {/* <span className='inline-block text-7xl font-bold text-dark dark:text-light md:text-6xl sm:text-5xl xs:text-4xl'>
