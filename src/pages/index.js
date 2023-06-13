@@ -6,9 +6,11 @@ import Layout from '@/components/Layout'
 import TextAnimation from '@/components/TextAnimation'
 import RA from '@/components/RA'
 import { LinkArrow } from '@/components/SocialMediaIcons'
+import PageTransition from '@/components/PageTransition'
 
 import mainPortfolioPicture from '../../public/images/profile/mainPortfolioPicture.png'
 import mainPortfolioPicture_2 from '../../public/images/profile/mainPortfolioPicture_2.png'
+
 // import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
 
 export default function Home() {
@@ -18,6 +20,9 @@ export default function Home() {
         <title>Ryan Abeysinghe</title>
         <meta name='description' content='' />
       </Head>
+
+      <PageTransition />
+
       <main className='flex w-full flex-col items-center justify-center text-dark dark:text-light'>
         <Layout className='pt-16 xl:pt-16 md:pt-16 sm:pt-8'>
 

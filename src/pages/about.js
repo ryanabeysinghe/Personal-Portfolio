@@ -4,10 +4,12 @@ import TextAnimation from '@/components/TextAnimation'
 import Layout from '@/components/Layout'
 import Image from 'next/image'
 import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
+
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import RA from '@/components/RA'
+import PageTransition from '@/components/PageTransition'
 
 import aboutPortfolioPicture from '../../public/images/profile/aboutPortfolioPicture.png';
 
@@ -46,6 +48,9 @@ const About = () => {
                 <title>About | Ryan Abeysinghe</title>
                 <meta name='description' content='' />
             </Head>
+
+            <PageTransition />
+            
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16'>
                     <TextAnimation text="Keep Moving Forward!" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
