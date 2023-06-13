@@ -2,13 +2,14 @@ import React, { useRef, useEffect } from 'react'
 import Head from 'next/head'
 import TextAnimation from '@/components/TextAnimation'
 import Layout from '@/components/Layout'
-import portraitPicture from '../../public/images/profile/portraitPicture.jpg'
 import Image from 'next/image'
 import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import RA from '@/components/RA'
+
+import aboutPortfolioPicture from '../../public/images/profile/aboutPortfolioPicture.png';
 
 const NumAnimation = ({num}) => {
     const ref = useRef(null);
@@ -43,7 +44,7 @@ const About = () => {
         <>
             <Head>
                 <title>About | Ryan Abeysinghe</title>
-                <meta name='description' content='About Ryan Abeysinghe' />
+                <meta name='description' content='' />
             </Head>
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16'>
@@ -67,7 +68,7 @@ const About = () => {
 
                         <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8'>
                             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
-                            <Image src={portraitPicture} alt='Ryan Abeysinghe Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
+                            <Image src={aboutPortfolioPicture} alt='Ryan Abeysinghe About Section Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
                             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
                         </div>
 

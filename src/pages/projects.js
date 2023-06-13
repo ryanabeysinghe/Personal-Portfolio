@@ -81,7 +81,7 @@ const projects = () => {
     <>
       <Head>
         <title>Projects | Ryan Abeysinghe</title>
-        <meta name='description' content='About Ryan Abeysinghe' />
+        <meta name='description' content='' />
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16'>
