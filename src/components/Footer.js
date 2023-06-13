@@ -14,7 +14,7 @@ const Footer = () => {
             <Layout className='py-8 flex items-center justify-between xl:py-8 lg:flex-col lg:py-6 md:py-6 sm:py-6'>
                 <span>&copy; {new Date().getFullYear()} ~ All Rights Reserved</span>
                 <div className='flex items-center lg:py-2 xxxs:text-sm'>
-                    Built With <span className='text-primary dark:text-primary text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-4'>Ryan Abeysinghe</Link>
+                    Built With <span className='text-primary dark:text-primary text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-[6px]'>Ryan Abeysinghe</Link>
                 </div>
 
                 <div className='flex items-center justify-between flex-wrap lg:py-2'>

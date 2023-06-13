@@ -59,7 +59,7 @@ const Experience = () => {
                     <ul className='w-full flex flex-col items-start justify-between ml-24 md:ml-8 xs:ml-8'>
 
                         <ExperienceDescription
-                            occupation='full stack developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='June 2023 - Present' address='Arlington, VA'
+                            occupation='full stack developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='July 2023 - Present' address='Arlington, VA'
                             description={[
                                 'Develop and maintain codebase for CTA/CES websites and related web initiatives',
                                 'Troubleshoot and debug web applications; leverage external experts for complex development needs',
