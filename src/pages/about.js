@@ -49,17 +49,17 @@ const About = () => {
                 <Layout className='pt-16'>
                     <TextAnimation text="Keep Moving Forward!" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
                     <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
-                        <div className='col-span-3 flex flex-col items-center justify-start xl:col-span-4 md:order-2 md:col-span-8'>
+                        <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>About Me</h2>
                             <p className='font-medium text-dark dark:text-light'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
                             </p>
 
-                            <p className='mt-4 font-medium text-dark dark:text-light'>
+                            <p className='my-4 font-medium text-dark dark:text-light'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse in est ante in nibh. Et tortor at risus viverra adipiscing at in.
                             </p>
 
-                            <p className='mt-4 font-medium text-dark dark:text-light'>
+                            <p className='font-medium text-dark dark:text-light'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean et tortor at risus viverra adipiscing at. Blandit massa enim nec dui nunc mattis enim.
                             </p>
 

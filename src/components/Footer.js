@@ -10,14 +10,14 @@ const Footer = () => {
     const [mode, setMode] = useSwitchTheme();
 
     return (
-        <footer className='w-full border-t-2 border-solid border-dark text-dark font-medium text-lg dark:border-light dark:text-light sm:text-base'>
+        <footer className='w-full border-t-2 border-solid font-medium text-lg border-dark text-dark dark:border-light dark:text-light sm:text-base'>
             <Layout className='py-8 flex items-center justify-between xl:py-8 lg:flex-col lg:py-6 md:py-6 sm:py-6'>
                 <span>&copy; {new Date().getFullYear()} ~ All Rights Reserved</span>
                 <div className='flex items-center lg:py-2 xxxs:text-sm'>
                     Built With <span className='text-primary dark:text-primary text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-4'>Ryan Abeysinghe</Link>
                 </div>
 
-                <div className='flex items-center justify-center flex-wrap lg:py-2'>
+                <div className='flex items-center justify-between flex-wrap lg:py-2'>
                     <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.6rem] mr-3 mb-[0.1rem] lg:mr-5'>
                         <GithubIcon />
                     </motion.a>
