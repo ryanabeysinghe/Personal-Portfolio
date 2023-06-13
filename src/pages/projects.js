@@ -1,16 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+
 import Layout from '@/components/Layout';
 import TextAnimation from '@/components/TextAnimation'
-import Link from 'next/link';
 import { GithubIcon } from '@/components/SocialMediaIcons'
-import Image from 'next/image';
+import RA from '@/components/RA';
+
 import RandSConstructionsWebsiteProj from '../../public/images/projects/RandSConstructionsWebsiteProj.png';
 import PersonalPortfolioWebsiteProj from '../../public/images/projects/PersonalPortfolioWebsiteProj.png';
 import COVID19DataScienceProj from '../../public/images/projects/COVID19DataScienceProj.png';
 import TerpExchangeProj from '../../public/images/projects/TerpExchangeProj.png';
-import { motion } from 'framer-motion';
-import RA from '@/components/RA';
 
 const MotionLink = motion(Link);
 
@@ -119,14 +122,16 @@ const projects = () => {
 
             <div className='col-span-6'>
               Project-4
+            </div>
+
+            <div className='col-span-12'>
+              Featured Project
             </div> */}
 
           </div>
 
-
         </Layout>
         <RA />
-
       </main>
     </>
   );
