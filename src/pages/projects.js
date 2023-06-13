@@ -9,6 +9,7 @@ import Layout from '@/components/Layout';
 import TextAnimation from '@/components/TextAnimation'
 import { GithubIcon } from '@/components/SocialMediaIcons'
 import RA from '@/components/RA';
+import PageTransition from '@/components/PageTransition'
 
 import RandSConstructionsWebsiteProj from '../../public/images/projects/RandSConstructionsWebsiteProj.png';
 import PersonalPortfolioWebsiteProj from '../../public/images/projects/PersonalPortfolioWebsiteProj.png';
@@ -86,6 +87,9 @@ const projects = () => {
         <title>Projects | Ryan Abeysinghe</title>
         <meta name='description' content='' />
       </Head>
+
+      <PageTransition />
+
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16 xl:pt-16'>
           <TextAnimation text="Inspire Change Through Design!" className='!text-7xl mb-16 2xl:!text-6xl xl:!text-5xl sm:!text-4xl sm:mb-8 xs:!text-3xl xxxs:!text-2xl' />
