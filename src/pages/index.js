@@ -7,13 +7,19 @@ import TextAnimation from '@/components/TextAnimation'
 import RA from '@/components/RA'
 import { LinkArrow } from '@/components/SocialMediaIcons'
 import PageTransition from '@/components/PageTransition'
+import { useTheme } from '@/components/ThemeContext'
 
 import mainPortfolioPicture from '../../public/images/profile/mainPortfolioPicture.png'
 import mainPortfolioPicture_2 from '../../public/images/profile/mainPortfolioPicture_2.png'
 
+import Tilt from 'react-parallax-tilt';
+
 // import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
 
 export default function Home() {
+
+  const { mode } = useTheme();
+
   return (
     <>
       <Head>
@@ -28,7 +34,7 @@ export default function Home() {
 
           <TextAnimation text="Hello, I'm Ryan!" className='mb-16 !text-7xl lg:!text-7xl md:!text-6xl sm:!text-5xl xs:!text-4xl xxs:!text-3xl sm:mb-8' />
           <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
-            
+
             <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8 md:mt-8'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>Welcome</h2>
 
@@ -49,11 +55,14 @@ export default function Home() {
 
             </div>
 
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
-              <Image src={mainPortfolioPicture_2} alt='Ryan Abeysinghe Home Section Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
-            </div>
+            <Tilt glareEnable={true} glareColor={`${mode === 'light' ? '#FFFFFF' : '#FFFFFF'}`} glareBorderRadius='1rem' className='col-span-3 xl:col-span-4 md:order-1 md:col-span-8'>
+              <div className='relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark p-8'>
+                <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light' />
+                <Image src={mainPortfolioPicture_2} alt='Ryan Abeysinghe Home Section Profile Picture' className='w-full h-auto rounded-2xl pointer-events-none' priority
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' />
+              </div>
+
+            </Tilt>
 
             <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col md:-mb-8 xs:-mb-[4.5rem] xs:mr-3'>
 
