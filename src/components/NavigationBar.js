@@ -4,9 +4,9 @@ import Logo from '@/components/Logo'
 import { useRouter } from 'next/router'
 import { GithubIcon, InstagramIcon, LinkedInIcon, MoonIcon, SunIcon, YouTubeIcon } from '@/components/SocialMediaIcons'
 import { motion } from 'framer-motion'
-//import { useTheme } from 'styled-components'
 import useSwitchTheme from './hooks/useSwitchTheme'
 import ThemeManager from './ThemeManager';
+import { useTheme } from '@/components/ThemeContext';
 
 const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
@@ -38,8 +38,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 
 const NavigationBar = () => {
-
-    //const [mode, setMode] = useSwitchTheme();
+    const { mode, setMode } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -128,16 +127,13 @@ const NavigationBar = () => {
                                 <InstagramIcon />
                             </motion.a>
 
-                            {/* <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
+                            <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
                                 {
                                     mode === 'dark' ?
                                         <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
                                 }
 
-                            </button> */}
-
-                            <ThemeManager />
-
+                            </button>
                         </nav>
                     </motion.div>
                     : null

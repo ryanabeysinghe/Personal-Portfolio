@@ -15,6 +15,7 @@ module.exports = {
         light: "#FFF1E6", // Coconut
         primary: "#FF2400", // Scarlet 
         primaryDark: "#E3735E", // Terra Cotta
+        salmon: "#FA8072",
 
         // dark: "#1b1b1b",
         // light: "#f5f5f5",
