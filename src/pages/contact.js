@@ -15,7 +15,7 @@ const contact = () => {
     <PageTransition />
 
     <main>
-      <h2>Contact Page</h2>
+      <h2>Contact Page ~ Ryan Abeysinghe</h2>
     </main>
     </>
   );
