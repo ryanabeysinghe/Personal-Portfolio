@@ -13,19 +13,19 @@ const ExperienceDescription = ({ occupation, company, companyURL, date, address,
             <ProgressIndicator reference={ref} />
 
             <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}} className='md:-mt-2 xs:-mt-[0.5rem]' >
-                <h3 className='capitalize font-bold text-2xl text-dark dark:text-light sm:text-xl xs:text-base xxs:text-sm'>{occupation}</h3>
+                <h3 className='capitalize font-bold text-2xl text-dark dark:text-light sm:text-xl xs:text-lg xxs:text-base xxxs:text-sm'>{occupation}</h3>
 
                 <div>
-                    <a href={companyURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl sm:text-xl xs:text-base xxs:text-sm'>{company}</a>
+                    <a href={companyURL} target={'_blank'} className='text-primary dark:text-primary uppercase font-semibold text-xl sm:text-lg xs:text-lg xxs:text-base xxxs:text-sm'>{company}</a>
                 </div>
 
-                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg xs:text-sm xxs:text-xs'>
+                <span className='capitalize font-medium text-dark/75 dark:text-light/75 text-lg xs:text-base xxs:text-xs xxxs:text-[0.65rem]'>
                     {date} | <i>{address}</i>
                 </span>
 
-                <ul className='font-medium w-full text-lg text-dark dark:text-light md:text-sm xxs:text-xs'>
+                <ul className='font-medium w-full text-lg text-dark dark:text-light md:text-base sm:text-sm xxs:text-sm xxxs:text-xs'>
                     {description.map((bulletPoint, index) => (
-                        <li key={index} className='ml-6'>
+                        <li key={index} className='my-2 ml-2'>
                             &bull; {bulletPoint}
                         </li>
                     ))}
@@ -49,12 +49,13 @@ const Experience = () => {
             <div className='my-64 md:my-32'>
 
                 <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
-                    <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mb-16'>&lt;div className = 'experience'&gt;</h2>
+                    {/* <h2 className='font-bold text-7xl mb-32 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mb-16'>&lt;div className = 'experience'&gt;</h2> */}
+                    <h2 className='font-bold text-9xl mb-32 w-full text-center text-dark dark:text-light xl:text-8xl md:text-7xl sm:text-6xl xs:text-5xl xxxs:text-4xl sm:mb-24'>Experience</h2>
                 </motion.div>
 
                 <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
-                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-3 w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]' />
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-3 w-[4px] h-full bg-dark dark:bg-light origin-top md:left-[20px] xs:w-[3px] xs:left-[10.5px] xxxs:left-[6.5px]' />
 
                     <ul className='w-full flex flex-col items-start justify-between ml-24 md:ml-8 xs:ml-8'>
 
@@ -95,9 +96,9 @@ const Experience = () => {
 
                 </div>
 
-                <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
+                {/* <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring'}}>
                     <h2 className='font-bold text-7xl mt-32 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-lg md:mt-16'>&lt;/div&gt;</h2>
-                </motion.div>
+                </motion.div> */}
 
             </div>
         </>
