@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import TextAnimation from './TextAnimation';
 import { motion, useScroll } from 'framer-motion';
-import ProgressIndicator from './ProgressIndicator';
+import ProgressIndicator from '@/components/ProgressIndicator';
 
 const ExperienceDescription = ({ occupation, company, companyURL, date, address, description }) => {
 
