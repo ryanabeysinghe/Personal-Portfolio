@@ -54,7 +54,8 @@ const Skills = () => {
     return (
         <>
             <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring' }}>
-                <h2 className='font-bold text-7xl mt-64 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl md:mt-32'>&lt;div className = 'skills'&gt;</h2>
+                {/* <h2 className='font-bold text-7xl mt-64 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl md:mt-32'>&lt;div className = 'skills'&gt;</h2> */}
+                <h2 className='font-bold text-9xl mt-64 w-full text-center text-dark dark:text-light xl:text-8xl md:text-7xl xxxs:text-5xl md:mt-32'>Skills</h2>
             </motion.div>
 
             {/* <TextAnimation text="&lt;div className = 'skills'&gt;" className='font-bold !text-7xl mt-64 w-full text-left' /> */}
@@ -98,9 +99,9 @@ const Skills = () => {
                 </div>
             </div>
 
-            <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring' }}>
+            {/* <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: 'spring' }}>
                 <h2 className='font-bold text-7xl mt-10 w-full text-left text-dark dark:text-light xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl md:mb-32'>&lt;/div&gt;</h2>
-            </motion.div>
+            </motion.div> */}
 
             {/* <TextAnimation text="&lt;/div&gt;" className='font-bold !text-7xl mt-10 w-full text-left' /> */}
         </>
