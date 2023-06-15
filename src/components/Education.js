@@ -45,7 +45,7 @@ const Education = () => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start end", "center start"]
+        offset: ["start end", "center center"]
     })
 
     return (
@@ -59,7 +59,7 @@ const Education = () => {
 
                 <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
-                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[80%] bg-dark dark:bg-light origin-top md:left-[20px] xs:w-[3px] xs:left-[18.5px] xxs:left-[16.5px] xxxs:left-[12.5px]' />
+                    <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-4 w-[4px] h-[95.4%] bg-dark dark:bg-light origin-top md:left-[20px] xs:w-[3px] xs:left-[18.5px] xxs:left-[16.5px] xxxs:left-[12.5px]' />
 
                     <ul className='w-full flex flex-col items-start justify-between ml-24 md:ml-8 xs:ml-8'>
 
