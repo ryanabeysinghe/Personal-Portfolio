@@ -12,17 +12,17 @@ const Footer = () => {
             <Layout className='py-8 flex items-center justify-between xl:py-8 lg:flex-col lg:py-6 md:py-6 sm:py-6'>
                 <span>&copy; {new Date().getFullYear()} ~ All Rights Reserved</span>
                 <div className='flex items-center lg:py-2 xxxs:text-sm'>
-                    Built With <span className='text-primary dark:text-primary text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-[6px]'>Ryan Abeysinghe</Link>
+                    Built With <span className='text-primary dark:text-salmon animate-pulse text-2xl px-1'>&#10084;</span>by&nbsp;<Link href="/" className='underline underline-offset-[6px]'>Ryan Abeysinghe</Link>
                 </div>
 
                 <div className='flex items-center justify-between flex-wrap lg:py-2'>
-                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.6rem] mr-3 mb-[0.1rem] lg:mr-5'>
+                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem] sm:w-7 lg:mr-5'>
                         <GithubIcon />
                     </motion.a>
-                    <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 lg:mx-5'>
+                    <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3 lg:mx-5'>
                         <LinkedInIcon />
                     </motion.a>
-                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 mb-[0.01rem] lg:mx-5'>
+                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem] lg:mx-5'>
                         <InstagramIcon />
                     </motion.a>
 
