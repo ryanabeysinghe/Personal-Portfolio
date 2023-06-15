@@ -69,13 +69,13 @@ const NavigationBar = () => {
                 </nav>
 
                 <nav className='flex items-center justify-center flex-wrap'>
-                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.6rem] mr-3 mb-[0.1rem]'>
+                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem]'>
                         <GithubIcon />
                     </motion.a>
-                    <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3'>
+                    <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3'>
                         <LinkedInIcon />
                     </motion.a>
-                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 mb-[0.01rem]'>
+                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem]'>
                         <InstagramIcon />
                     </motion.a>
 
@@ -117,17 +117,17 @@ const NavigationBar = () => {
                         </nav>
 
                         <nav className='flex items-center justify-center flex-wrap my-5'>
-                            <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.6rem] mr-3 mb-[0.1rem] text-light dark:text-dark'>
+                            <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem] text-light dark:text-dark'>
                                 <GithubIcon />
                             </motion.a>
-                            <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3'>
+                            <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3'>
                                 <LinkedInIcon />
                             </motion.a>
-                            <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-6 mx-3 mb-[0.01rem]'>
+                            <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -3 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem]'>
                                 <InstagramIcon />
                             </motion.a>
 
-                            <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-6 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
+                            <button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
                                 {
                                     mode === 'dark' ?
                                         <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
