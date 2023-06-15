@@ -5,7 +5,7 @@ const ProgressIndicator = ({reference}) => {
 
     const { scrollYProgress } = useScroll({
         target: reference,
-        offset: ["start center", "center end"]
+        offset: ["start end", "start center"]
     })
 
     return (
