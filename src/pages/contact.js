@@ -15,7 +15,7 @@ const contact = () => {
     <PageTransition />
 
     <main>
-      <h2>Give me some time ~ I am still coding!!</h2>
+      <h2 className='text-dark dark:bg-light'>Give me some time ~ I am still coding!!</h2>
     </main>
     </>
   );
