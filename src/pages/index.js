@@ -104,7 +104,7 @@ export default function Home() {
         </Layout>
 
         <RA />
-        <EarthPlacement />
+        {/* <EarthPlacement /> */}
         {/* <div className='absolute right-8 bottom-8 inline-block w-32 pointer-events-none md:hidden'>
           <Image src={programmingSymbol} alt="Programming Picture Symbol" className='w-full h-auto fill-dark dark:fill-light' priority
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />

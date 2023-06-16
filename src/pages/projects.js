@@ -186,7 +186,7 @@ const projects = () => {
 
         </Layout>
         <RA />
-        <EarthPlacement />
+        {/* <EarthPlacement /> */}
       </main>
     </>
   );

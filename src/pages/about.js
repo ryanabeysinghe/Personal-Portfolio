@@ -124,7 +124,7 @@ const About = () => {
                 </Layout>
 
                 <RA />
-                <EarthPlacement />
+                {/* <EarthPlacement /> */}
 
             </main>
         </>
