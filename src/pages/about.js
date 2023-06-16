@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import Tilt from 'react-parallax-tilt';
-import { motionValue, useInView, useMotionValue, useSpring } from 'framer-motion'
+import { motionValue, useInView, useMotionValue, useSpring, motion, useScroll } from 'framer-motion'
+import aboutPortfolioPicture from '../../public/images/profile/aboutPortfolioPicture.png';
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -12,8 +13,6 @@ import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import RA from '@/components/RA'
 import PageTransition from '@/components/PageTransition'
-
-import aboutPortfolioPicture from '../../public/images/profile/aboutPortfolioPicture.png';
 import { useTheme } from '@/components/ThemeContext';
 
 const NumAnimation = ({ num }) => {
@@ -47,6 +46,7 @@ const NumAnimation = ({ num }) => {
 const About = () => {
 
     const { mode } = useTheme();
+    const { scrollYProgress } = useScroll();
 
     return (
         <>
@@ -60,6 +60,8 @@ const About = () => {
             </Head>
 
             <PageTransition />
+
+            <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-10' style={{ scaleX: scrollYProgress }} />
 
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16 xl:pt-16'>
