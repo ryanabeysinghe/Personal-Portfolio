@@ -13,13 +13,15 @@ import mainPortfolioPicture from '../../public/images/profile/mainPortfolioPictu
 import mainPortfolioPicture_2 from '../../public/images/profile/mainPortfolioPicture_2.png'
 
 import Tilt from 'react-parallax-tilt';
+import { motion, useScroll } from 'framer-motion';
 
 // import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
 
 export default function Home() {
 
   const { mode } = useTheme();
-
+  const { scrollYProgress } = useScroll();
+  
   return (
     <>
       <Head>
@@ -32,8 +34,10 @@ export default function Home() {
       </Head>
 
       <PageTransition />
+      
+      <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-10' style={{ scaleX: scrollYProgress }} />
 
-      <main className='flex w-full flex-col items-center justify-center text-dark dark:text-light'>
+      <main className='flex w-full flex-col items-center justify-center text-dark dark:text-light' >
         <Layout className='pt-16 xl:pt-16 md:pt-16 sm:pt-8'>
 
           <TextAnimation text="Hello, I'm Ryan!" className='mb-16 !text-7xl lg:!text-7xl md:!text-6xl sm:!text-5xl xs:!text-4xl xxs:!text-3xl sm:mb-8' />
