@@ -69,13 +69,13 @@ const NavigationBar = () => {
                 </nav>
 
                 <nav className='flex items-center justify-center flex-wrap'>
-                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem]'>
+                    <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem]' aria-label='Github Icon'>
                         <GithubIcon />
                     </motion.a>
-                    <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3'>
+                    <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3' aria-label='LinkedIn Icon'>
                         <LinkedInIcon />
                     </motion.a>
-                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem]'>
+                    <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem]' aria-label='Instagram Icon'>
                         <InstagramIcon />
                     </motion.a>
 
@@ -117,13 +117,13 @@ const NavigationBar = () => {
                         </nav>
 
                         <nav className='flex items-center justify-center flex-wrap my-5'>
-                            <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem] text-light dark:text-dark'>
+                            <motion.a href="https://github.com/ryanabeysinghe" target={"_blank"} rel="noopener noreferrer" whileTap={{ scale: 0.8 }} className='w-[1.83rem] mr-3 mb-[0.2rem] text-light dark:text-dark' aria-label='Github Icon'>
                                 <GithubIcon />
                             </motion.a>
-                            <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileTap={{ scale: 0.8 }} className='w-7 mx-3'>
+                            <motion.a href="https://www.linkedin.com/in/ryan-abeysinghe/" target={"_blank"} rel="noopener noreferrer" whileTap={{ scale: 0.8 }} className='w-7 mx-3' aria-label='LinkedIn Icon'>
                                 <LinkedInIcon />
                             </motion.a>
-                            <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem]'>
+                            <motion.a href="https://www.instagram.com/ryanabeysinghe/" target={"_blank"} rel="noopener noreferrer" whileTap={{ scale: 0.8 }} className='w-7 mx-3 mb-[0.01rem]' aria-label='Instagram Icon'>
                                 <InstagramIcon />
                             </motion.a>
 
