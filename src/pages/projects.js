@@ -1,4 +1,7 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+import Tilt from 'react-parallax-tilt';
+
 import { motion } from 'framer-motion';
 
 import Head from 'next/head';
@@ -10,17 +13,12 @@ import TextAnimation from '@/components/TextAnimation'
 import { GithubIcon } from '@/components/SocialMediaIcons'
 import RA from '@/components/RA';
 import PageTransition from '@/components/PageTransition'
+import { useTheme } from '@/components/ThemeContext';
 
 import RandSConstructionsWebsiteProj from '../../public/images/projects/RandSConstructionsWebsiteProj.png';
 import PersonalPortfolioWebsiteProj from '../../public/images/projects/PersonalPortfolioWebsiteProj.png';
 import COVID19DataScienceProj from '../../public/images/projects/COVID19DataScienceProj.png';
 import TerpExchangeProj from '../../public/images/projects/TerpExchangeProj.png';
-
-import Tilt from 'react-parallax-tilt';
-import { useTheme } from '@/components/ThemeContext';
-import EarthPlacement from '@/components/EarthPlacement';
-
-import { useMediaQuery } from 'react-responsive';
 
 const MotionLink = motion(Link);
 
@@ -186,7 +184,6 @@ const projects = () => {
 
         </Layout>
         <RA />
-        {/* <EarthPlacement /> */}
       </main>
     </>
   );
