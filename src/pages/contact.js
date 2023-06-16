@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import PageTransition from '@/components/PageTransition'
 
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion';
 
 const contact = () => {
 
