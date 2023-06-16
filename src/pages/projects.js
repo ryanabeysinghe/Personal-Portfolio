@@ -124,7 +124,7 @@ const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
   );
 };
 
-const projects = () => {
+const Projects = () => {
 
   const { scrollYProgress } = useScroll();
 
@@ -194,4 +194,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;
