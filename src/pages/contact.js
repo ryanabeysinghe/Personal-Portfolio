@@ -9,7 +9,11 @@ const contact = () => {
     <>
     <Head>
       <title>Contact | Ryan Abeysinghe</title>
-      <meta name='description' content='' />
+      <meta name='description' content='Contact | Ryan Abeysinghe' />
+      <meta name="keywords" content="Contact | Ryan Abeysinghe, Contact, Contact Ryan Abeysinghe, Contact Ryan Abeysinghe Personal Portfolio, Contact Ryan Abeysinghe Portfolio" />
+      <meta property="og:title" content="Contact | Ryan Abeysinghe" />
+      <meta property="og:description" content="Contact Page for Ryan Abeysinghe" />
+      <link rel="canonical" href="https://ryanabeysinghe.com/contact" key="canonical" />
     </Head>
 
     <PageTransition />

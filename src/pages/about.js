@@ -53,7 +53,11 @@ const About = () => {
         <>
             <Head>
                 <title>About | Ryan Abeysinghe</title>
-                <meta name='description' content='' />
+                <meta name='description' content='About | Ryan Abeysinghe' />
+                <meta name="keywords" content="About | Ryan Abeysinghe, About, About Ryan Abeysinghe, About Ryan Abeysinghe Personal Portfolio" />
+                <meta property="og:title" content="About | Ryan Abeysinghe" />
+                <meta property="og:description" content="About Page for Ryan Abeysinghe" />
+                <link rel="canonical" href="https://ryanabeysinghe.com/about" key="canonical" />
             </Head>
 
             <PageTransition />

@@ -131,7 +131,11 @@ const projects = () => {
     <>
       <Head>
         <title>Projects | Ryan Abeysinghe</title>
-        <meta name='description' content='' />
+        <meta name='description' content='Projects | Ryan Abeysinghe' />
+        <meta name="keywords" content="Projects | Ryan Abeysinghe, Projects, Projects Ryan Abeysinghe, Projects Ryan Abeysinghe Personal Portfolio, Projects Ryan Abeysinghe Portfolio" />
+        <meta property="og:title" content="Projects | Ryan Abeysinghe" />
+        <meta property="og:description" content="Projects Page for Ryan Abeysinghe" />
+        <link rel="canonical" href="https://ryanabeysinghe.com/projects" key="canonical" />
       </Head>
 
       <PageTransition />
