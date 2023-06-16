@@ -61,7 +61,7 @@ const About = () => {
 
             <PageTransition />
 
-            <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-10' style={{ scaleX: scrollYProgress }} />
+            <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-40' style={{ scaleX: scrollYProgress }} />
 
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16 xl:pt-16'>
