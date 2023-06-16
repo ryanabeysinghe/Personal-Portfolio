@@ -7,7 +7,7 @@ const MotionLink = motion(Link);
 
 const RA = () => { 
   return (
-    <div className='flex fixed left-4 bottom-12 items-center justify-center overflow-hidden md:right-8 md:left-auto md:top-0 md:bottom-auto md:absolute sm:right-0'>
+      <div className='flex fixed left-2 bottom-12 items-center justify-center overflow-hidden lg:left-2 lg:-bottom-4 md:right-8 md:left-auto md:top-0 md:bottom-auto md:absolute sm:right-0'>
         <div className='w-48 h-auto flex items-center justify-center relative md:w-24'>
             <FullStackDeveloperAndSoftwareEngineerCircularText className={'fill-dark animate-spin-slow dark:fill-light'} />
 
@@ -17,7 +17,7 @@ const RA = () => {
                 RA
             </MotionLink>
         </div>
-    </div>
+    </div> 
   );
 };
 
