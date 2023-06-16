@@ -20,6 +20,8 @@ import Tilt from 'react-parallax-tilt';
 import { useTheme } from '@/components/ThemeContext';
 import EarthPlacement from '@/components/EarthPlacement';
 
+import { useMediaQuery } from 'react-responsive';
+
 const MotionLink = motion(Link);
 
 const FramerImage = motion(Image);
@@ -27,34 +29,66 @@ const FramerImage = motion(Image);
 const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
 
   const { mode } = useTheme();
+  const isMobile = useMediaQuery({ maxWidth: '767px' });
 
   return (
-    <Tilt glareEnable={true} glareColor={`${mode === 'light' ? '#FFFFFF' : '#FFFFFF'}`} glareBorderRadius='1.5rem'>
-      <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-2xl p-12 xl:flex-col xl:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
+    <div>
+      {isMobile ? (
+        <Tilt glareEnable={true} glareColor={`${mode === 'light' ? '#FFFFFF' : '#FFFFFF'}`} glareBorderRadius='1.5rem'>
+          <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-2xl p-12 xl:flex-col xl:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
 
-        <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
 
-        <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg xl:w-full'>
-          <FramerImage src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem]' whileHover={{ scale: 1.10 }} transition={{ duration: 0.5 }} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
-        </Link>
+            <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg xl:w-full'>
+              <FramerImage src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem]' whileHover={{ scale: 1.10 }} transition={{ duration: 0.5 }} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
+            </Link>
 
-        <div className='w-1/2 flex flex-col items-start justify-between pl-6 xl:w-full xl:pl-0 xl:pt-6'>
-          <span className='text-primary dark:text-primary font-semibold text-xl md:text-lg sm:text-base xs:text-sm'>{projectType}</span>
-          <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-4 text-dark dark:text-light'>
-            <h2 className='mt-2 w-full text-left text-3xl font-bold text-dark dark:text-light md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>{projectTitle}</h2>
-          </Link>
-          <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs xxxs:text-[0.65rem]'>{projectDescription}</p>
+            <div className='w-1/2 flex flex-col items-start justify-between pl-6 xl:w-full xl:pl-0 xl:pt-6'>
+              <span className='text-primary dark:text-primary font-semibold text-xl md:text-lg sm:text-base xs:text-sm'>{projectType}</span>
+              <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-4 text-dark dark:text-light'>
+                <h2 className='mt-2 w-full text-left text-3xl font-bold text-dark dark:text-light md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>{projectTitle}</h2>
+              </Link>
+              <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs xxxs:text-[0.65rem]'>{projectDescription}</p>
 
-          <div className='w-full mt-2 flex items-center justify-between'>
-            <Link href={projectURL} target={"_blank"}
-              className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700 sm:px-4 sm:text-base xs:text-sm xxs:px-3 xxxs:px-2 xxxs:text-xs'>Visit Project</Link>
-            <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
-          </div>
+              <div className='w-full mt-2 flex items-center justify-between'>
+                <Link href={projectURL} target={"_blank"}
+                  className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700 sm:px-4 sm:text-base xs:text-sm xxs:px-3 xxxs:px-2 xxxs:text-xs'>Visit Project</Link>
+                <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
+              </div>
 
-        </div>
+            </div>
 
-      </article>
-    </Tilt>
+          </article>
+        </Tilt>
+      ) : (
+        <Tilt glareEnable={true} glareColor={`${mode === 'light' ? '#FFFFFF' : '#FFFFFF'}`} glareBorderRadius='1.5rem' tiltMaxAngleY='8' tiltMaxAngleX='8' >
+          <article className='w-full flex relative items-center justify-between rounded-br-3xl rounded-3xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-2xl p-12 xl:flex-col xl:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
+
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
+
+            <Link href={projectURL} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg xl:w-full'>
+              <FramerImage src={projectImg} alt={projectTitle} className='w-full h-auto border-2 border-solid border-dark dark:border-light rounded-[0.5rem]' whileHover={{ scale: 1.10 }} transition={{ duration: 0.5 }} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />
+            </Link>
+
+            <div className='w-1/2 flex flex-col items-start justify-between pl-6 xl:w-full xl:pl-0 xl:pt-6'>
+              <span className='text-primary dark:text-primary font-semibold text-xl md:text-lg sm:text-base xs:text-sm'>{projectType}</span>
+              <Link href={projectURL} target={"_blank"} className='hover:underline underline-offset-4 text-dark dark:text-light'>
+                <h2 className='mt-2 w-full text-left text-3xl font-bold text-dark dark:text-light md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>{projectTitle}</h2>
+              </Link>
+              <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs xxxs:text-[0.65rem]'>{projectDescription}</p>
+
+              <div className='w-full mt-2 flex items-center justify-between'>
+                <Link href={projectURL} target={"_blank"}
+                  className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700 sm:px-4 sm:text-base xs:text-sm xxs:px-3 xxxs:px-2 xxxs:text-xs'>Visit Project</Link>
+                <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
+              </div>
+
+            </div>
+
+          </article>
+        </Tilt>
+      )}
+    </div>
   );
 };
 
