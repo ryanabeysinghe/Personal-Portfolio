@@ -52,7 +52,7 @@ const NavigationBar = () => {
 
             {/* Responsive Mobile Nav Bar Icon */}
 
-            <button className='flex-col justify-center items-center hidden mt-2 lg:flex' onClick={handleClick}>
+            <button className='flex-col justify-center items-center hidden mt-2 lg:flex' onClick={handleClick} title='Mobile Navigation Bar Button'>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
                 <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'}`}></span>
@@ -127,7 +127,7 @@ const NavigationBar = () => {
                                 <InstagramIcon />
                             </motion.a>
 
-                            <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} whileTap={{ scale: 0.8 }} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `} title='Mobile Navigation Bar'>
+                            <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} whileTap={{ scale: 0.8 }} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `} title='Mobile Navigation Bar Sun/Moon Button'>
                                 {
                                     mode === 'dark' ?
                                         <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
