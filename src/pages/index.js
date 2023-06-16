@@ -13,8 +13,12 @@ import mainPortfolioPicture from '../../public/images/profile/mainPortfolioPictu
 import mainPortfolioPicture_2 from '../../public/images/profile/mainPortfolioPicture_2.png'
 
 import Tilt from 'react-parallax-tilt';
+import EarthCanvas from '@/components/Earth'
+import { motion } from 'framer-motion';
+import EarthPlacement from '@/components/EarthPlacement'
 
 // import programmingSymbol from '../../public/images/svgs/programmingSymbol.png'
+
 
 export default function Home() {
 
@@ -64,31 +68,22 @@ export default function Home() {
 
             </Tilt>
 
+            {/* col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col md:-mb-8 xs:-mb-[4.5rem] xs:mr-3 */}
+
             <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center xl:mt-8 md:order-3 md:pb-16 xs:flex-col md:-mb-8 xs:-mb-[4.5rem] xs:mr-3'>
 
               <div className='flex flex-col items-end justify-center xl:items-center'>
-                {/* <span className='inline-block text-7xl font-bold text-dark dark:text-light md:text-6xl sm:text-5xl xs:text-4xl'>
-                  +
-                </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>years of F/E experience</h2> */}
                 <Link href="/resume.pdf" target={'_blank'} className='flex items-center bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700 hover:dark:bg-dark hover:dark:text-light hover:dark:border-light sm:px-3 sm:text-sm xs:mb-12 xs:ml-4 xs:text-lg xs:px-8' download={false}>
                   Resume <LinkArrow className='w-6 ml-1 sm:w-5' />
                 </Link>
               </div>
+              
+
+              {/* <div className='flex flex-col items-end justify-center xl:items-center'>
+                <EarthCanvas />
+              </div> */}
 
               <div className='flex flex-col items-end justify-center xl:items-center'>
-                {/* <span className='inline-block text-7xl font-bold text-dark dark:text-light md:text-6xl sm:text-5xl xs:text-4xl'>
-                  +
-                </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>projects completed</h2> */}
-                <Link href="/projects" className='ml-4 bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-[2.4rem] rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700 hover:dark:bg-dark hover:dark:text-light hover:dark:border-light sm:px-[1.5rem] sm:text-sm xs:mb-12 xs:text-lg xs:px-11'>Projects</Link>
-              </div>
-
-              <div className='flex flex-col items-end justify-center xl:items-center'>
-                {/* <span className='inline-block text-7xl font-bold text-dark dark:text-light md:text-6xl sm:text-5xl xs:text-4xl'>
-                  +
-                </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>years of B/E experience</h2> */}
                 <Link href="/contact" className='ml-4 bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-[2.45rem] rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700 hover:dark:bg-dark hover:dark:text-light hover:dark:border-light sm:px-[1.5rem] sm:text-sm xs:mb-12 xs:text-lg xs:px-[2.82rem]'>Contact</Link>
               </div>
 
@@ -99,6 +94,7 @@ export default function Home() {
         </Layout>
 
         <RA />
+        <EarthPlacement />
         {/* <div className='absolute right-8 bottom-8 inline-block w-32 pointer-events-none md:hidden'>
           <Image src={programmingSymbol} alt="Programming Picture Symbol" className='w-full h-auto fill-dark dark:fill-light' priority
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw' />

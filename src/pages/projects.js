@@ -18,6 +18,7 @@ import TerpExchangeProj from '../../public/images/projects/TerpExchangeProj.png'
 
 import Tilt from 'react-parallax-tilt';
 import { useTheme } from '@/components/ThemeContext';
+import EarthPlacement from '@/components/EarthPlacement';
 
 const MotionLink = motion(Link);
 
@@ -147,6 +148,7 @@ const projects = () => {
 
         </Layout>
         <RA />
+        <EarthPlacement />
       </main>
     </>
   );

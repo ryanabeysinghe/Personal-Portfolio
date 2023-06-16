@@ -15,6 +15,7 @@ import PageTransition from '@/components/PageTransition'
 
 import aboutPortfolioPicture from '../../public/images/profile/aboutPortfolioPicture.png';
 import { useTheme } from '@/components/ThemeContext';
+import EarthPlacement from '@/components/EarthPlacement';
 
 const NumAnimation = ({ num }) => {
     const ref = useRef(null);
@@ -119,6 +120,7 @@ const About = () => {
                 </Layout>
 
                 <RA />
+                <EarthPlacement />
 
             </main>
         </>
