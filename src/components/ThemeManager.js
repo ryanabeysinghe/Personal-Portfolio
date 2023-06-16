@@ -13,7 +13,7 @@ const ThemeManager = () => {
     };
 
     return (
-        <motion.button onClick={toggleMode} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }}>
+        <motion.button onClick={toggleMode} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} title='Navigation Bar'>
             {
                 mode === 'dark' ?
                     <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
