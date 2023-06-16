@@ -25,7 +25,11 @@ export default function Home() {
     <>
       <Head>
         <title>Ryan Abeysinghe</title>
-        <meta name='description' content='' />
+        <meta name="description" content="Home Page for Personal Portfolio" />
+        <meta name="keywords" content="Ryan Abeysinghe, Ryan Abeysinghe Personal Portfolio, Personal Portfolio, Ryan Abeysinghe Portfolio" />
+        <meta property="og:title" content="Ryan Abeysinghe" />
+        <meta property="og:description" content="Home Page for Ryan Abeysinghe" />
+        <link rel="canonical" href="https://ryanabeysinghe.com/" key="canonical" />
       </Head>
 
       <PageTransition />
