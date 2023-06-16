@@ -2,7 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Tilt from 'react-parallax-tilt';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -126,7 +126,7 @@ const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
 
 const projects = () => {
 
-  // const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
 
   return (
     <>
@@ -141,7 +141,7 @@ const projects = () => {
 
       <PageTransition />
 
-      {/* <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-10' style={{ scaleX: scrollYProgress }} /> */}
+      <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-10' style={{ scaleX: scrollYProgress }} />
 
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16 xl:pt-16'>
