@@ -127,7 +127,7 @@ const NavigationBar = () => {
                                 <InstagramIcon />
                             </motion.a>
 
-                            <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} whileTap={{ scale: 0.8 }} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `}>
+                            <motion.button onClick={() => setMode(mode === 'light' ? 'dark' : 'light')} whileTap={{ scale: 0.8 }} className={`ml-3 w-7 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-light text-dark' : 'bg-dark text-light'} `} title='Mobile Navigation Bar'>
                                 {
                                     mode === 'dark' ?
                                         <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />
