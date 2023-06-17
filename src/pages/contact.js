@@ -5,6 +5,10 @@ import Head from 'next/head';
 import PageTransition from '@/components/PageTransition'
 
 import { motion, useScroll } from 'framer-motion';
+import Layout from '@/components/Layout';
+import TextAnimation from '@/components/TextAnimation';
+
+import { FormControl, FormLabel } from '@chakra-ui/react';
 
 const Contact = () => {
 
@@ -26,7 +30,15 @@ const Contact = () => {
     <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-40' style={{ scaleX: scrollYProgress }} />
 
     <main>
-      <h2 className='text-dark dark:bg-light'>Give me some time ~ I am still coding!!</h2>
+      <Layout className='pt-16'>
+        
+        <TextAnimation text="Get In Touch!" className='mb-16 2xl:!text-7xl xl:!text-6xl md:!text-5xl xs:!text-4xl xxxs:!text-3xl sm:mb-8' />
+
+        <FormControl isRequired>
+          <FormLabel>Name</FormLabel>
+        </FormControl>
+
+      </Layout>
     </main>
     </>
   );
