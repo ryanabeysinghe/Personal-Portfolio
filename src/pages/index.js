@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <Head>
         <title>Ryan Abeysinghe</title>
-        <meta name="description" content="Home Page for Personal Portfolio" />
+        <meta name="description" content="Ryan Abeysinghe's Personal Portfolio using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing JavaScript React Framework" />
         <meta name="keywords" content="Ryan Abeysinghe, Ryan Abeysinghe Personal Portfolio, Personal Portfolio, Ryan Abeysinghe Portfolio" />
         <meta property="og:title" content="Ryan Abeysinghe" />
         <meta property="og:description" content="Home Page for Ryan Abeysinghe" />
