@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.7.0",
     "@react-three/drei": "^9.74.15",
     "@react-three/fiber": "^8.13.3",
     "autoprefixer": "10.4.14",
