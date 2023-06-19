@@ -64,7 +64,7 @@ const About = () => {
             <motion.div className='fixed top-0 left-0 right-0 h-[0.5rem] bg-primary origin-[0%] z-40' style={{ scaleX: scrollYProgress }} />
 
             <main className='flex w-full flex-col items-center justify-center'>
-                <Layout className='pt-16 xl:pt-16'>
+                <Layout className='pt-16 xl:pt-16 mb-20'>
                     <TextAnimation text="Keep Moving Forward!" className='mb-16 2xl:!text-7xl xl:!text-6xl md:!text-5xl xs:!text-4xl xxxs:!text-3xl sm:mb-8' />
                     <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
                         <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8 md:mt-8'>
