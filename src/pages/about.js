@@ -55,7 +55,7 @@ const About = () => {
                 <meta name='description' content="About | Ryan Abeysinghe's Personal Portfolio using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing JavaScript React Framework" />
                 <meta name="keywords" content="About | Ryan Abeysinghe, About, About Ryan Abeysinghe, About Ryan Abeysinghe Personal Portfolio" />
                 <meta property="og:title" content="About | Ryan Abeysinghe" />
-                <meta property="og:description" content="About Page for Ryan Abeysinghe" />
+                <meta property="og:description" content="AAbout | Ryan Abeysinghe's Personal Portfolio using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing JavaScript React Framework" />
                 <link rel="canonical" href="https://ryanabeysinghe.com/about" key="canonical" />
             </Head>
 
