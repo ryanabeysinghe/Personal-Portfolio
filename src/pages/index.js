@@ -29,7 +29,7 @@ export default function Home() {
         <meta name="description" content="Ryan Abeysinghe's Personal Portfolio using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing JavaScript React Framework" />
         <meta name="keywords" content="Ryan Abeysinghe, Ryan Abeysinghe Personal Portfolio, Personal Portfolio, Ryan Abeysinghe Portfolio" />
         <meta property="og:title" content="Ryan Abeysinghe" />
-        <meta property="og:description" content="Home Page for Ryan Abeysinghe" />
+        <meta property="og:description" content="Ryan Abeysinghe's Personal Portfolio using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing JavaScript React Framework" />
         <link rel="canonical" href="https://ryanabeysinghe.com/" key="canonical" />
       </Head>
 
