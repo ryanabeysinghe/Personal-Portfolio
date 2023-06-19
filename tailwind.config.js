@@ -13,9 +13,9 @@ module.exports = {
       colors: {
         dark: "#28282B", // Matte Black
         light: "#FFF1E6", // Coconut
-        primary: "#FF2400", // Scarlet 
+        primary: "#FA8072", // Salmon
         primaryDark: "#E3735E", // Terra Cotta
-        salmon: "#FA8072", // Salmon
+        // primary: "#FF2400", // Scarlet 
 
         // dark: "#1b1b1b",
         // light: "#f5f5f5",

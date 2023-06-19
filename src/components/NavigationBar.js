@@ -8,6 +8,8 @@ import useSwitchTheme from './hooks/useSwitchTheme'
 import ThemeManager from './ThemeManager';
 import { useTheme } from '@/components/ThemeContext';
 
+import styles from '@/styles/Home.module.css';
+
 const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
 
