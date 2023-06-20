@@ -80,7 +80,7 @@ export default function Home() {
                 </span>
                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>years of F/E experience</h2> */}
                 <Link href="/resume.pdf" target={'_blank'} className='flex items-center bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-700 hover:dark:bg-dark hover:dark:text-light hover:dark:border-light sm:px-3 sm:text-sm xs:mb-12 xs:ml-4 xs:text-lg xs:px-8' download={false}>
-                  Resume <LinkArrow className='w-6 ml-1 sm:w-5' />
+                  Resume <LinkArrow className='!w-6 ml-1 sm:w-5' />
                 </Link>
               </div>
 
