@@ -48,18 +48,18 @@ export default function Home() {
 
               <div className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
                 {/* <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' /> */}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
+                I'm a <strong>Software Engineer</strong> based in College Park, Maryland. I find great satisfaction in the process of transforming concepts into cutting-edge web applications.   
               </div>
 
               <div className='my-4 font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
                 {/* <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' /> */}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
+                Delve into my most recent experience, projects, and education, showcasing my knowledge in full stack development within the field of software engineering. 
               </div>
 
-              <div className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
-                {/* <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' /> */}
+              {/* <div className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
+                <TextAnimation text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.' className='!text-base !font-medium !text-left' />
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
-              </div>
+              </div> */}
 
             </div>
 

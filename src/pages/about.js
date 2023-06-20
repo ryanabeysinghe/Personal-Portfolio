@@ -70,15 +70,15 @@ const About = () => {
                         <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8 md:mt-8'>
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>About Me</h2>
                             <p className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet. Dolor morbi non arcu risus quis varius quam.
+                                As a full stack developer, I have a comprehensive understanding of both front-end and back-end development. I enjoy utilizing the entire technology stack required to build and deploy web applications. I strive to be well-versed in all aspects of the development process. 
                             </p>
 
                             <p className='my-4 font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse in est ante in nibh. Et tortor at risus viverra adipiscing at in.
+                                Technology is constantly evolving and changing, and as a full stack developer, I understand the significance of staying up to date with the latest technologies, trends, and tools. I'm always eager to expand my knowledge and embrace new technologies that can enhance the development process.
                             </p>
 
                             <p className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean et tortor at risus viverra adipiscing at. Blandit massa enim nec dui nunc mattis enim.
+                                Outside of my professional career, I find myself immersed in a world of thrilling physical and mental challenges as a dedicated gym rat, capturing fleeting moments and transforming them into visual stories as an aspiring photographer, and embracing the electrifying atmosphere of sports as an enthusiast.
                             </p>
 
                         </div>
