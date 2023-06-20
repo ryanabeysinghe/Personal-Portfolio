@@ -88,7 +88,7 @@ const Contact = () => {
           <TextAnimation text="Get In Touch!" className='mb-16 2xl:!text-7xl xl:!text-6xl md:!text-5xl xs:!text-4xl xxxs:!text-3xl sm:mb-8' />
 
           {/* <Container> */}
-          <div className='w-full mx-auto flex flex-col h-auto relative items-center justify-between border-2 border-solid rounded-br-3xl rounded-3xl shadow-2xl p-12 border-dark bg-light dark:border-light dark:bg-dark'>
+          <div className='w-full max-w-[650px] mx-auto flex flex-col h-auto relative items-center justify-between border-2 border-solid rounded-br-3xl rounded-3xl shadow-2xl p-12 border-dark bg-light dark:border-light dark:bg-dark'>
 
           <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light' />
 
