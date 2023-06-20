@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-
+import { motion, useScroll } from 'framer-motion';
+import { Button, Container, FormControl, FormErrorMessage, FormLabel, Input, Text, Textarea, useToast, useColorModeValue } from '@chakra-ui/react';
 import Head from 'next/head';
 
 import PageTransition from '@/components/PageTransition'
-
-import { motion, useScroll } from 'framer-motion';
 import Layout from '@/components/Layout';
 import TextAnimation from '@/components/TextAnimation';
-
-import { Button, Container, FormControl, FormErrorMessage, FormLabel, Input, Text, Textarea, useToast, useColorModeValue } from '@chakra-ui/react';
-import { sendContactForm } from '@/lib/api';
 import { useTheme } from '@/components/ThemeContext';
+import { sendContactForm } from '@/lib/api';
 
 const initValues = { name: "", email: "", subject: "", message: "" };
 
