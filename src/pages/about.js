@@ -70,11 +70,11 @@ const About = () => {
                         <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8 md:mt-8'>
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 md:text-2xl sm:text-xl xs:text-lg xxxs:text-base'>About Me</h2>
                             <p className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
-                                As a full stack developer, I have a comprehensive understanding of both front-end and back-end development. I enjoy utilizing the entire technology stack required to build and deploy web applications. I strive to be well-versed in all aspects of the development process. 
+                                As a <strong>Full Stack Developer</strong>, I have a comprehensive understanding of both front-end and back-end development. I enjoy utilizing the entire technology stack required to build and deploy web applications. I strive to be well-versed in all aspects of the development process. 
                             </p>
 
                             <p className='my-4 font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
-                                Technology is constantly evolving and changing, and as a full stack developer, I understand the significance of staying up to date with the latest technologies, trends, and tools. I'm always eager to expand my knowledge and embrace new technologies that can enhance the development process.
+                                Technology is constantly evolving and changing, and as a full stack developer, I understand the significance of staying up to date with the latest technologies, trends, and tools. I&apos;m always eager to expand my knowledge and embrace new technologies that can enhance the development process.
                             </p>
 
                             <p className='font-medium text-dark dark:text-light md:text-lg xs:text-base xxxs:text-sm'>
