@@ -42,9 +42,9 @@ on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_me
 - [framer-motion](https://www.framer.com/motion/) <br />
 - [Tailwind css](https://tailwindcss.com/) <br /> -->
 
-# Ryan Abeysinghe's Responsive Personal Portfolio Website
+# Ryan Abeysinghe's Personal Portfolio Website
 
-## *Disclaimer*: Do not clone or replicate this repository without consent. [Contact](https://ryanabeysinghe.com/contact) for any questions or concerns
+## *Disclaimer* : Do not clone or replicate this repository without proper consent. [Contact](https://ryanabeysinghe.com/contact) for any questions or concerns
 
 ## This is a fully responsive personal portfolio website using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing React JavaScript Framework
 
@@ -54,6 +54,8 @@ https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/db0eeeb8-4a
 ## Demo Video Mobile:
 https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/9a45c8be-d905-4b5d-a5ee-03f2fd56072b
 
+## Page Speed Insights (PSI) for Desktop: 
+https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/481a3065-0033-4e91-9864-8626f85282d2
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
