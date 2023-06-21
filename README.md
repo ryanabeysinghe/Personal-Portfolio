@@ -55,7 +55,7 @@ https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/db0eeeb8-4a
 https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/9a45c8be-d905-4b5d-a5ee-03f2fd56072b
 
 ## Page Speed Insights (PSI) for Desktop: 
-https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/481a3065-0033-4e91-9864-8626f85282d2
+![PSI](https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/481a3065-0033-4e91-9864-8626f85282d2)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
