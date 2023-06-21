@@ -42,6 +42,14 @@ on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_me
 - [framer-motion](https://www.framer.com/motion/) <br />
 - [Tailwind css](https://tailwindcss.com/) <br /> -->
 
+# Ryan Abeysinghe's Responsive Personal Portfolio Website
+
+## **Disclaimer**: Do not clone or replicate this repository without consent. [Contact](https://ryanabeysinghe.com/contact) for any questions or concerns
+
+## This is a fully responsive personal portfolio website using Next.js, JavaScript, Tailwind CSS, HTML, Nodemailer and Vercel utilizing React JavaScript Framework
+
+# Demo Video: 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
