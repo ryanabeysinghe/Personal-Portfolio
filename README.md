@@ -6,22 +6,22 @@
 
 # *Domain:* https://ryanabeysinghe.com/
 
-## Demo Video Desktop: 
+## `Demo Video Desktop:`
 https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/db0eeeb8-4ad4-4508-93d5-95f57aa171de
 
-## Demo Video Mobile:
+## `Demo Video Mobile:`
 https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/9a45c8be-d905-4b5d-a5ee-03f2fd56072b
 
-## Page Speed Insights (PSI) for Desktop: 
+## `Page Speed Insights (PSI) for Desktop:` 
 ![PSI](https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/481a3065-0033-4e91-9864-8626f85282d2)
 
-## Hostinger - Internet Domain Registrar
+## `Hostinger - Internet Domain Registrar`
 
-**URL:** https://www.hostinger.com/
+- **URL:** https://www.hostinger.com/
 
-## Vercel - Web Hosting Provider
+## `Vercel - Web Hosting Provider`
 
-**URL:** https://vercel.com/
+- **URL:** https://vercel.com/
 
 # SEO (Search Engine Optimization) Practices 
 
@@ -29,9 +29,9 @@ https://github.com/ryanabeysinghe/Personal-Portfolio/assets/75642666/9a45c8be-d9
 
 A sitemap is made in XML (Extensible Markup Language) and is primarily used as a way for AI to index your site easier. Search engines like Google use XML sitemaps to store your site’s pages more efficiently, producing better results when people search for related terms.
 
-**Sitemap URL:** https://ryanabeysinghe.com/sitemap.xml
+- **Sitemap URL:** https://ryanabeysinghe.com/sitemap.xml
 
-**Posted Sitemap on Google Search Console:** https://search.google.com/search-console/about
+- **Posted Sitemap on Google Search Console:** https://search.google.com/search-console/about
 
 ## `Google Search Console`
 
