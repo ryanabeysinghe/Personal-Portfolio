@@ -67,7 +67,7 @@ const Education = () => {
                         institution='University of Maryland'
                         institutionURL='https://www.umd.edu/' date='august 2019 - dec 2023' GPA='GPA: 3.62'
                         description={[
-                            'Relevant Courswork: Object-Oriented Programming, Introduction to Computer Systems & Data Science, Algorithms, Web Application Development with JavaScript, Data Structures, Programming Handheld Systems, Computer Vision',
+                            'Relevant Courswork: Object-Oriented Programming, Introduction to Computer Systems & Data Science, Algorithms, Web Application Development with JavaScript, Data Structures, Programming Handheld Systems, Computer Vision, Artificial Intelligence',
                             'Awards/Scholarships: Dean’s List, Clifford & Camille Kendall CMNS Scholarship, CMNS Undergraduate Scholarship',
                         ]}/>
 

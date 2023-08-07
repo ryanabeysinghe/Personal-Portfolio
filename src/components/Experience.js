@@ -62,28 +62,29 @@ const Experience = () => {
                         <ExperienceDescription
                             occupation='full stack developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='July 2023 - Present' address='Arlington, VA'
                             description={[
-                                'Develop and maintain codebase for CTA/CES websites and related web initiatives',
+                                'Oversee full-stack development and ongoing codebase maintenance for CTA/CES web apps and related web initiatives',
                                 'Troubleshoot and debug web applications; leverage external experts for complex development needs',
-                                'Supports maintenance of websites by actively operating in CMS',
+                                'Built UIs using JavaScript, HTML, and CSS, while actively operating in CMS for website maintenance purposes',
                             ]} />
 
-                        <ExperienceDescription
-                            occupation='software developer intern' company='finra' companyURL='https://www.finra.org/#/' date='May 2022 - August 2022' address='Rockville, MD'
-                            description={[
-                                'Collaborated with FINRA CAT’s (consolidated audit trail) cutting-edge technical team, enhanced and maintained application code through requirement reviews, test cases, and utilizing AWS services, Java, SQL, and Python programming languages',
-                                'Architected and integrated a scalable STRESS testing infrastructure for FINRA CAT’s application, utilizing AWS cloudbased resources to support high-volume integration and penetration testing; increased test coverage by 3%',
-                                'Facilitated seamless integration and maintenance of code/scripts within CAT’s team repository, leveraging Jenkins pipelines for efficient continuous integration/delivery (CI/CD), enabling streamlined code deployment to production environments',
-                            ]} />
 
                         <ExperienceDescription
-                            occupation='freelance web developer' company='r & s constructions llc' companyURL='https://randsconstructions.com/' date='July 2022 - Present' address='Gaithersburg, MD'
+                            occupation='freelance web developer' company='r & s constructions llc' companyURL='https://randsconstructions.com/' date='July 2023 - Present' address='Gaithersburg, MD'
                             description={[
                                 'Developed fully responsive website using JavaScript, HTML, and CSS utilizing React JavaScript Framework to elevate user experience (UX) for general contracting purposes',
                                 'Executed SEO best practices to optimize company’s web traffic by establishing sitemap, meta tags, robots.txt, images, internal links, semantic HTML, titles/headings, optimized keywords',
                                 'Established Domain, Domain Nameservers, SSL certificate, Cloudflare CDN, and DNS Zone editor configuration utilizing web hosting provider Hostinger',
                             ]} />
 
+                        <ExperienceDescription
+                            occupation='software developer intern' company='finra' companyURL='https://www.finra.org/#/' date='May 2022 - August 2022' address='Rockville, MD'
+                            description={[
+                                'Collaborated with FINRA CAT’s (consolidated audit trail) technical team, enhanced and maintained application code through requirement reviews, test cases, utilizing AWS services, Java, SQL, and Python programming languages',
+                                'Architected and integrated a scalable STRESS testing infrastructure for FINRA CAT’s application, utilizing AWS cloud-based resources to support high-volume integration and penetration testing; increased test coverage by 3%',
+                                'Facilitated integration and maintenance of code/scripts within CAT’s team repository, leveraging Jenkins pipelines for efficient continuous integration/delivery (CI/CD), enabling streamlined code deployment to production environments',
+                            ]} />
 
+                    
                         <ExperienceDescription
                             occupation='help desk analyst' company='westat' companyURL='https://www.westat.com/' date='July 2021 - May 2022' address='Rockville, MD'
                             description={[

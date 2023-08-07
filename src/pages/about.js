@@ -109,7 +109,7 @@ const About = () => {
 
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold text-dark dark:text-light md:text-6xl sm:text-5xl xs:text-4xl'>
-                                    <NumAnimation num={2} />+
+                                    <NumAnimation num={3} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 2xl:text-[1.04rem] xl:text-center xl:text-xl lg:text-lg md:text-base xs:text-sm xxs:text-xs'>years of B/E experience</h2>
                             </div>
