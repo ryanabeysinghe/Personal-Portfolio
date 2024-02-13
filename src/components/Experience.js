@@ -69,7 +69,7 @@ const Experience = () => {
 
 
                         <ExperienceDescription
-                            occupation='freelance web developer' company='r & s constructions llc' companyURL='https://randsconstructions.com/' date='July 2023 - Present' address='Gaithersburg, MD'
+                            occupation='freelance web developer' company='r & s constructions llc' companyURL='https://randsconstructions.com/' date='January 2024 - Present' address='Gaithersburg, MD'
                             description={[
                                 'Developed fully responsive website using JavaScript, HTML, and CSS utilizing React JavaScript Framework to elevate user experience (UX) for general contracting purposes',
                                 'Executed SEO best practices to optimize company’s web traffic by establishing sitemap, meta tags, robots.txt, images, internal links, semantic HTML, titles/headings, optimized keywords',

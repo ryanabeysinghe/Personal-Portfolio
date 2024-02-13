@@ -24,7 +24,7 @@ const MotionLink = motion(Link);
 
 const FramerImage = motion(Image);
 
-const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
+const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL, disableURL }) => {
 
   const { mode } = useTheme();
   const isMobile = useMediaQuery({ maxWidth: '767px' });
@@ -49,9 +49,9 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
               <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs xxxs:text-[0.65rem]'>{projectDescription}</p>
 
               <div className='w-full mt-2 flex items-center justify-between'>
-                <Link href={projectURL} target={"_blank"}
+                <Link href={projectURL} onClick={disableURL} target={"_blank"}
                   className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700 sm:px-4 sm:text-base xs:text-sm xxs:px-3 xxxs:px-2 xxxs:text-xs'>Visit Project</Link>
-                <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
+                <MotionLink href={gitHubURL} onClick={disableURL} target={"_blank"} whileHover={{ y: -4 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
               </div>
 
             </div>
@@ -76,9 +76,9 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
               <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs xxxs:text-[0.65rem]'>{projectDescription}</p>
 
               <div className='w-full mt-2 flex items-center justify-between'>
-                <Link href={projectURL} target={"_blank"}
+                <Link href={projectURL} onClick={disableURL} target={"_blank"}
                   className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700 sm:px-4 sm:text-base xs:text-sm xxs:px-3 xxxs:px-2 xxxs:text-xs'>Visit Project</Link>
-                <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -5 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
+                <MotionLink href={gitHubURL} onClick={disableURL} target={"_blank"} whileHover={{ y: -5 }} whileTap={{ scale: 0.8 }} className='w-10 ml-4 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
               </div>
 
             </div>
@@ -90,7 +90,7 @@ const LargeScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
   );
 };
 
-const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL }) => {
+const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescription, gitHubURL, projectURL, disableURL }) => {
 
   const { mode } = useTheme();
 
@@ -112,9 +112,9 @@ const SmallScaleProject = ({ projectImg, projectType, projectTitle, projectDescr
           <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs xxxs:text-[0.65rem]'>{projectDescription}</p>
 
           <div className='w-full mt-2 flex items-center justify-between'>
-            <Link href={projectURL} target={"_blank"}
+            <Link href={projectURL} onClick={disableURL} target={"_blank"}
               className='rounded-lg p-2 px-6 bg-dark text-light dark:bg-light dark:text-dark text-lg font-semibold hover:bg-light hover:text-dark dark:hover:bg-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light duration-700 sm:px-4 sm:text-base xs:text-sm xxs:px-3 xxxs:px-2 xxxs:text-xs'>Visit Project</Link>
-            <MotionLink href={gitHubURL} target={"_blank"} whileHover={{ y: -5 }} whileTap={{ scale: 0.8 }} className='w-10 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
+            <MotionLink href={gitHubURL} onClick={disableURL} target={"_blank"} whileHover={{ y: -5 }} whileTap={{ scale: 0.8 }} className='w-10 text-dark dark:text-light md:w-8'> <GithubIcon /> </MotionLink>
           </div>
 
         </div>
@@ -170,7 +170,12 @@ const Projects = () => {
             <div className='col-span-12'>
               <LargeScaleProject projectImg={TerpExchangeProj} projectType='iOS App' projectTitle='TerpExchange'
                 projectDescription='Developed iOS app in Swift, enabling students to buy and sell products seamlessly within the UMD campus community. Leveraged Google Firebase Authentication to establish a robust student-affiliated authentication system among UMD students, mitigating scam risks and ensuring secure access. '
-                gitHubURL='/' projectURL='/' />
+                gitHubURL='/' projectURL='/' 
+                disableURL={(e) => {
+                  e.preventDefault();
+                  e.target.style.cursor = 'not-allowed';
+                }} 
+                />
             </div>
 
             {/* <div className='col-span-6'>
