@@ -73,7 +73,7 @@ const Education = () => {
 
                         <EducationDescription degreeType='High School Diploma'
                         institution='Watkins Mill High School'
-                        institutionURL='https://www2.montgomeryschoolsmd.org/schools/watkinsmillhs' date='august 2015 - june 2019' GPA='GPA: 3.40'
+                        institutionURL='https://www2.montgomeryschoolsmd.org/schools/watkinsmillhs' date='august 2014 - june 2018' GPA='GPA: 3.40'
                         description={[
                             'Organizations: National Honor Society, Project Lead the Way, Computer Science Club, Chess Club Society',
                             "Extracurricular Activities: Varsity Men's Football & Lacrosse",
