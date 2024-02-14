@@ -128,6 +128,11 @@ const Projects = () => {
 
   const { scrollYProgress } = useScroll();
 
+  const disableURL = (e) => {
+    e.preventDefault();
+    e.target.style.cursor = 'not-allowed';
+  };
+
   return (
     <>
       <Head>
@@ -170,23 +175,7 @@ const Projects = () => {
             <div className='col-span-12'>
               <LargeScaleProject projectImg={TerpExchangeProj} projectType='iOS App' projectTitle='TerpExchange'
                 projectDescription='Developed iOS app in Swift, enabling students to buy and sell products seamlessly within the UMD campus community. Leveraged Google Firebase Authentication to establish a robust student-affiliated authentication system among UMD students, mitigating scam risks and ensuring secure access. '
-                gitHubURL='' projectURL='' 
-                disableGithubURL={(e) => {
-                  e.preventDefault();
-                  e.target.style.cursor = 'not-allowed';
-                }}
-                disableProjectURL={(e) => {
-                  e.preventDefault();
-                  e.target.style.cursor = 'not-allowed';
-                }} 
-                disableProjectTitleURL={(e) => {
-                  e.preventDefault();
-                  e.target.style.cursor = 'not-allowed';
-                }} 
-                disableProjectImageURL={(e) => {
-                  e.preventDefault();
-                  e.target.style.cursor = 'not-allowed';
-                }}  
+                gitHubURL='/' projectURL='/' disableGithubURL={disableURL} disableProjectURL={disableURL} disableProjectTitleURL={disableURL} disableProjectImageURL={disableURL}
                 />
             </div>
 
