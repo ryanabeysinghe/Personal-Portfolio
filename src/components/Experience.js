@@ -77,7 +77,7 @@ const Experience = () => {
                             ]} />
 
                         <ExperienceDescription
-                            occupation='software developer intern' company='finra' companyURL='https://www.finra.org/#/' date='May 2022 - August 2022' address='Rockville, MD'
+                            occupation='software developer intern' company='finra' companyURL='https://www.finra.org/#/' date='May 2021 - August 2021' address='Rockville, MD'
                             description={[
                                 'Collaborated with FINRA CAT’s (consolidated audit trail) technical team, enhanced and maintained application code through requirement reviews, test cases, utilizing AWS services, Java, SQL, and Python programming languages',
                                 'Architected and integrated a scalable STRESS testing infrastructure for FINRA CAT’s application, utilizing AWS cloud-based resources to support high-volume integration and penetration testing; increased test coverage by 3%',
