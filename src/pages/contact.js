@@ -92,42 +92,40 @@ const Contact = () => {
 
           <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light sm:h-[102%] xs:-right-2 xs:w-full xs:rounded-[1.5rem]' />
 
-            {error && (
-              <Text style={{color: "#FA8072"}} mb={8} fontSize={["xs", "sm", "md", "lg"]} fontWeight='semibold'>
-                {error}
-              </Text>
-            )}
-
             <FormControl isRequired isInvalid={touched.name && !values.name} mb={8}>
               {/* <FormLabel>Name</FormLabel> */}
               <Input type='text' name='name' placeholder='Name *' _placeholder={{ color: `${mode === 'light' ? '#808080' : '#808080'}` }} style={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} fontWeight='medium' fontSize={["xs", "sm", "md", "lg"]} borderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} focusBorderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} _hover={{ borderColor: `${mode === 'light' ? '#FA8072' : '#FA8072'}` }} borderWidth='2px' value={values.name} onChange={handleChange} onBlur={onBlur} />
 
-              <FormErrorMessage style={{ color: "#FA8072" }}  fontWeight='semibold' fontSize='xs' alignItems='center' mt={5}>Name field is required</FormErrorMessage>
+              <FormErrorMessage style={{ color: "#FA8072" }}  fontWeight='semibold' fontSize={["xs", "sm", "md", "lg"]} alignItems='center' mt={5} className='animate-pulse'>Name field is required</FormErrorMessage>
             </FormControl>
 
             <FormControl isRequired isInvalid={touched.email && !values.email} mb={8}>
               {/* <FormLabel>Email</FormLabel> */}
               <Input type='email' name='email' placeholder='Email *' _placeholder={{ color: `${mode === 'light' ? '#808080' : '#808080'}` }} style={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} fontWeight='medium' fontSize={["xs", "sm", "md", "lg"]} borderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} focusBorderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} _hover={{ borderColor: `${mode === 'light' ? '#FA8072' : '#FA8072'}` }} borderWidth='2px' value={values.email} onChange={handleChange} onBlur={onBlur} />
-              <FormErrorMessage style={{ color: "#FA8072" }} fontWeight='semibold' fontSize='xs' mt={5}>Email field is required</FormErrorMessage>
+              <FormErrorMessage style={{ color: "#FA8072" }} fontWeight='semibold' fontSize={["xs", "sm", "md", "lg"]} mt={5} className='animate-pulse'>Email field is required</FormErrorMessage>
             </FormControl>
 
             <FormControl isRequired isInvalid={touched.subject && !values.subject} mb={8}>
               {/* <FormLabel>Subject</FormLabel> */}
               <Input type='text' name='subject' placeholder='Subject *' _placeholder={{ color: `${mode === 'light' ? '#808080' : '#808080'}` }} style={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} fontWeight='medium' fontSize={["xs", "sm", "md", "lg"]} borderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} focusBorderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} _hover={{ borderColor: `${mode === 'light' ? '#FA8072' : '#FA8072'}` }} borderWidth='2px' value={values.subject} onChange={handleChange} onBlur={onBlur} />
-              <FormErrorMessage style={{ color: "#FA8072" }} fontWeight='semibold' fontSize='xs' mt={5}>Subject field is required</FormErrorMessage>
+              <FormErrorMessage style={{ color: "#FA8072" }} fontWeight='semibold' fontSize={["xs", "sm", "md", "lg"]} mt={5} className='animate-pulse'>Subject field is required</FormErrorMessage>
             </FormControl>
 
             <FormControl isRequired isInvalid={touched.message && !values.message} mb={8}>
               {/* <FormLabel>Message</FormLabel> */}
               <Textarea type='text' name='message' placeholder='Message *' _placeholder={{ color: `${mode === 'light' ? '#808080' : '#808080'}` }} style={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} fontWeight='medium' fontSize={["xs", "sm", "md", "lg"]} borderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} focusBorderColor={{ color: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} _hover={{ borderColor: `${mode === 'light' ? '#FA8072' : '#FA8072'}` }} borderWidth='2px' rows={8} value={values.message} onChange={handleChange} onBlur={onBlur} />
-              <FormErrorMessage style={{ color: "#FA8072" }} fontWeight='semibold' fontSize='xs' mt={5}>Message field is required</FormErrorMessage>
+              <FormErrorMessage style={{ color: "#FA8072" }} fontWeight='semibold' fontSize={["xs", "sm", "md", "lg"]} mt={5} className='animate-pulse'>Message field is required</FormErrorMessage>
             </FormControl>
 
             <Button variant='outline' style={{ color: "#FA8072" }} fontWeight='bold' fontSize={["xs", "sm", "md", "lg"]} width={["80px", "140px", "200px", "200px"]} height={["30px", "40px", "50px", "50px"]} borderColor={{ color: "#FA8072" }} borderWidth='2px' _hover={{ backgroundColor: `${mode === 'light' ? '#28282B' : '#FFF1E6'}` }} transition='all 0.7s' isLoading={isLoading} disabled={!values.name || !values.email || !values.subject || !values.message} onClick={onSubmit}>SUBMIT</Button>
 
+            {error && (
+              <Text style={{color: "#FA8072"}} mt={8} mb={0} fontSize={["xs", "sm", "md", "lg"]} fontWeight='semibold' className='animate-pulse'>
+                {error}
+              </Text>
+            )}
           </div>
-          {/* </Container> */}
-
+        
         </Layout>
 
         <RA />

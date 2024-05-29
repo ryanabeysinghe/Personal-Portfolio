@@ -60,11 +60,11 @@ const Experience = () => {
                     <ul className='w-full flex flex-col items-start justify-between ml-24 md:ml-8 xs:ml-8'>
 
                         <ExperienceDescription
-                            occupation='full stack developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='July 2023 - Present' address='Arlington, VA'
+                            occupation='full stack web developer intern' company='consumer technology association' companyURL='https://www.cta.tech/' date='July 2023 - May 2024' address='Arlington, VA'
                             description={[
-                                'Oversee full-stack development and ongoing codebase maintenance for CTA/CES web apps and related web initiatives',
-                                'Troubleshoot and debug web applications; leverage external experts for complex development needs',
-                                'Built UIs using JavaScript, HTML, and CSS, while actively operating in CMS for website maintenance purposes',
+                                'Maintained and developed dynamic web applications utilizing JavaScript, HTML, CSS, and C# within the ASP.NET MVC framework, integrating services with Jira Agile methodology',
+                                'Collaborated on deploying CES/CTA web applications in Azure cloud-based production environments and maintained staging environments for testing, ensuring smooth releases',
+                                'Developed and integrated custom Kentico CMS page types, templates, and widgets enhancing CES/CTA website functionality for over 500K monthly visitors',
                             ]} />
 
 
